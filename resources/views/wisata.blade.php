@@ -1,9 +1,6 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
 <div class="container">
     <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">

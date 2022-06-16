@@ -14,8 +14,10 @@
     <link rel=”icon” type=”image/png” href=/img/Malang.png”>
 
     {{-- Trix-editor --}}
-    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <link rel="stylesheet" type="text/css" href="css/trix.css">
     <script type="text/javascript" src="/js/trix.js"></script>
+
+    <link rel="stylesheet" href="css/carousel.css">
 
     <style>
       trix-toolbar [data-trix-button-group = "file-tools"]{
@@ -26,11 +28,11 @@
   
     <title>SID-Purwodadi | {{ $title }}</title>
   </head>
-  <body style="background-color: #DEDEE0">
+  <body style="background-color: #ffff">
     
     @include('navbar.navbar')
 
-    <div class="container mt-2">
+    <div class="">
       @yield('container')
     </div>
 

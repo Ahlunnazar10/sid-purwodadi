@@ -1,16 +1,12 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
 <div class="container">
-  <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
           <h1 class="text-center">Data Demografi Berdasarkan Populasi Wilayah</h1>
           <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Data Desa</p>
           <hr>
-  
+        <div class="row">
           <div class="col-lg-11">
               <table class="table table-hover">
                 <thead>
@@ -47,12 +43,12 @@
                   <th>{{ $wilayah->sum('j_pria') }}</th>
                   <th>{{ $wilayah->sum('j_wanita') }}</th>
               </tfoot>
-              </table>
-            </div>
-
+            </table>
+          </div>
         </div>
+
       </div>
-  </section>
+    </div>
 </div> 
 @endsection
     

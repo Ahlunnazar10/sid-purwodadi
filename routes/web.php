@@ -39,6 +39,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 // Route Beranda
 Route::get('/', function () {
     return view('beranda', [
+        'beritadesa' => Artikel::all(),
         "title" => "Beranda"
     ]);
 });

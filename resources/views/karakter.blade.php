@@ -1,15 +1,26 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="/img/desa.jpg" class="d-block w-100" alt="Karakteristik Desa" id="gelap">
+      </div>
+  </div>
+      <div class="container">
+          <div class="carousel-caption">
+          <h1>Karakteristik Desa Purwodadi.</h1>
+          <p>Berikut adalah Karakteristik Desa Purwodadi, Kecamatan Tirtoyudo, Kabupaten Malang.</p>
+          <p class="text-center" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Wikipedia</p>
+          <p><a class="btn btn-lg btn-primary" href="#konten">Karakteristik Desa</a></p>
+          </div>
+      </div>
 </div>
+
+
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
-          <h1 class="text-center">Karakteristik Desa Purwodadi</h1>
-          <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Wikipedia</p>
-              <img src="/img/desa.jpg" alt="Karakteristik Desa" class="img ban-img img-fluid mt-3 mb-3" id="img-konten">
               <h4>Karakteristik Ekonomi</h4>
               <hr>
               <strong>Perkebunan</strong>

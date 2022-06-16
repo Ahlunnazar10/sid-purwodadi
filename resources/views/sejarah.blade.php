@@ -1,15 +1,24 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-    <div class="container" id="text">
-        <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/img/sejarah.jpg" class="d-block w-100" alt="Sejarah Desa" id="gelap">
+            </div>
+        </div>
+            <div class="container">
+                <div class="carousel-caption">
+                <h1>Sejarah Desa Purwodadi.</h1>
+                <p>Berikut adalah sejarah Desa Purwodadi, Kecamatan Tirtoyudo, Kabupaten Malang.</p>
+                <p class="text-center" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Wikipedia</p>
+                <p><a class="btn btn-lg btn-primary" href="#konten">Sejarah Desa</a></p>
+                </div>
+            </div>
     </div>
+    
     <div class="container">
-        <section class="jumbotron text-center mb-5 mt-3">
             <div id="konten">
-                <h1 class="text-center">Sejarah Desa Purwodadi</h1>
-                <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Wikipedia</p>
-                    <img src="/img/sejarah.jpg" alt="Sejarah Desa" class="img ban-img img-fluid mt-3 mb-3" id="img-konten">
                     <p>Sebelum menjadi sebuah desa, kawasan ini lebih dikenal sebagai Hutan Lenggoksono dan Hutan Wediawu oleh para warga. Pada tahun 1945, kawasan ini dijadikan tempat pengungsian masyarakat dari Kabupaten Lumajang. Pada saat itu, salah satu tokoh pengungsi mengajukan permohonan kepada Kepala Desa Pujiharjo untuk membuka pengadaan lahan tanah garapan bagi warga yang belum memiliki lahan, Namun tidak disetujui dan diputuskan untuk bergabung dengan Desa Sumber Tangkil. Kemudian pada Tahun 1948, warga mengajukan permohonan ulang yang bertujuan untuk:</p>
                     <ol>
                         <li>Memberi papan dan pangan untuk rakyat yang memerlukan.</li>
@@ -26,7 +35,6 @@
 
                     Adapun yang dilarungkan berupa hasil bumi, polo gumantung, polo kependem, hasil laut, hasil sungai, kepala kambing dan lain-lain.</p>
             </div>
-        </section>
     </div>    
 @endsection
     

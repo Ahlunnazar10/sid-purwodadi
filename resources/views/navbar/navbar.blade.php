@@ -1,15 +1,31 @@
-<div class="container-fluid" style="background-image:url('/img/batik.png');margin-bottom:-16px;height:235px">
+<div class="container-fluid" style="background-image:url('/img/batik.png');">
   <section class="jumbotron text-center">
-    <img src="/img/Malang.png" alt="Logo Kab.Malang" class="img ban-img img-fluid mt-3" style="height: 140px;">
-    <h3 style="font-weight: 700; color:#055160;margin-top:-10px">Sistem Informasi Desa Purwodadi</h3>
-    <p class="fs-6" style="color:#055160;margin-top:-10px;font-weight:500">Kec. Tirtoyudo - Kab. Malang - Prov. Jawa Timur</p>
+    <div class="row">
+      <div class="col">
+        <img src="/img/Malang.png" alt="Logo Kab.Malang" class="img ban-img img-fluid mt-3" width="180">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3 style="font-weight: 700; color:#055160">Sistem Informasi Desa Purwodadi</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="fs-6" style="color:#055160;font-weight:500">Kec. Tirtoyudo - Kab. Malang - Prov. Jawa Timur</p>
+
+      </div>
+    </div>
   </section>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#198754">
   <div class="container">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="nav navbar-nav text-center fw-bold">
+    <button class="navbar-toggler m-auto mb-2 mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto fw-bold">
         <li class="nav-item ">
           <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" href="/">Beranda</a>
         </li>
@@ -110,7 +126,7 @@
   
         @else
         <li class="nav-item"> 
-          <a href="/login" class="nav-link tombol active"><i class="bi bi-box-arrow-in-right"></i> Login </a>
+          <a href="/login" class="nav-link tombol active "><i class="bi bi-box-arrow-in-right"></i> Login </a>
         </li>
         @endauth
       </ul>

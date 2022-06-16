@@ -1,14 +1,11 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
           <h1 class="text-center">Visi dan Misi Desa Purwodadi</h1>
-          <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Visi dan Misi</p>
+          <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Visi dan Misi Desa</p>
           <hr>
 
           <p class="text-center mt-4"><strong>1. Visi:</strong></p>

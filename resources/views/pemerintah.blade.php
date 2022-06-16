@@ -1,15 +1,26 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="/img/kantor.jpg" class="d-block w-100" alt="Pemerintahan" id="gelap">
+      </div>
+  </div>
+      <div class="container">
+          <div class="carousel-caption">
+          <h1>Pemerintah Desa Purwodadi.</h1>
+          <p>Berikut adalah Tugas, Fungsi & Wewenang Pemerintah Desa Purwodadi, Kecamatan Tirtoyudo, Kabupaten Malang.</p>
+          <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : PERMENDAGRI NOMOR 84 TAHUN 2015 TENTANG SUSUNAN ORGANISASI DAN TATA KERJA PEMERINTAH DESA</p>
+          <p><a class="btn btn-lg btn-primary mt-2" href="#konten">Pemerintah Desa</a></p>
+          </div>
+      </div>
 </div>
+
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
-          <h1 class="text-center">Pemerintah Desa Purwodadi</h1>
-          <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : PERMENDAGRI NOMOR 84 TAHUN 2015 TENTANG SUSUNAN ORGANISASI DAN TATA KERJA PEMERINTAH DESA</p>
-              <img src="/img/kantor.jpg" alt="Kantor Desa" class="img ban-img img-fluid mt-3 mb-3" id="img-konten">
+  
               <h4 class="text-center mb-3 mt-4">TATA KERJA PEMERINTAH DESA PURWODADI KECAMATAN TIRTOYUDO KABUPATEN MALANG</h4>
               <p><strong>Kepala Desa</strong> bertugas menyelenggarakan Pemerintahan Desa, melaksanakan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat. Untuk melaksanakan tugas Kepala Desa memiliki fungsi-fungsi sebagai berikut:</p>
               <ol>
