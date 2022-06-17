@@ -1,14 +1,11 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-    <div class="container" id="text">
-        <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-    </div>
 
     <div class="container">
-        <section class="jumbotron text-center mb-5" id="jumbotron">
+        <section class="jumbotron text-center mb-5 mt-5">
             <div class="row justify-content-center">
-                <div class="col-md-4 mb-5">
+                <div class="col-md-5 mb-5">
 
                     @if (session()->has('berhasil'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -24,7 +21,7 @@
                     </div>     
                     @endif
 
-                    <main class="form-signin">
+                    <main class="form-signin" id="form-login">
                         <form action="/login" method="post">
                             @csrf
                             <img class="mt-3" src="img/Malang.png" alt="Logo" width="180" height="130">

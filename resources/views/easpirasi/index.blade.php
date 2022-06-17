@@ -1,9 +1,11 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
+<style>
+  strong{
+    color:#055160;
+  }
+</style>
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
@@ -11,29 +13,78 @@
           <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Peraturan Desa</p>
           <hr>
 
-        <h3 class="text-center mt-5">Panduan Penyampaian Aspirasi:</h3>
-        <img src="img/quotation.png" alt="tanda petik" id="petik">
-        <p class="text-center mt-3"><strong>1. Gunakan identitas sesuai KTP anda</strong></p> 
-        <p class="text-center" id="text-aspirasi">Untuk menyampaikan aspirasi anda diminta untuk menggunakan identitas anda, yakni NIK (Nomor Induk Kependudukan) & NAMA sesuai KTP yang diisi di kolom yang tersedia.</p>
-        <img src="img/quotation.png" alt="tanda petik" id="petik">
-        <p class="text-center mt-3"><strong>
-          2. Sampaikan aspirasi anda dengan singkat & jelas</strong></p> 
-        <p class="text-center" id="text-aspirasi">Pada kolom aspirasi harap menggunakan bahasa indonesia, dengan singkat dan jelas yang mudah dipahami.</p>
-        <img src="img/quotation.png" alt="tanda petik" id="petik">
-        <p class="text-center mt-3"><strong>
-          3. Setiap aspirasi yang anda sampaikan angkat di tindak lanjuti maksimal 14 hari kerja</strong></p> 
-        <p class="text-center" id="text-aspirasi">Setiap aspirasi yang masuk akan ditampung oleh admin dan akan diupdate sesuai dengan hasil investigasi, status update aspirasi anda dapat anda ketahui melalui kolom pencarian.</p>
-        <img src="img/quotation.png" alt="tanda petik" id="petik">
-        <p class="text-center mt-3"><strong>
-          4. Terimakasih telah menggunakan layanan ini dengan bijak & sesuai ketentuan yang ada.</strong></p> 
-          <img src="img/quotation.png" alt="tanda petik" id="petik">
-          <p class="text-center mt-3"><strong>
-            5. Lengkapi Data E-Aspirasi</strong></p> 
-          <p class="text-center" id="text-aspirasi">Silakan lengkapi data pada form isian data aplikasi E-Aspirasi dibawah.
-          Setelah semua informasi sudah terisi lengkap akhiri dengan klik tombol Kirim Aspirasi, Aspirasi Anda akan tersimpan pada kolom permohonan.</p>
+        <h2 class="text-center mt-5" style="font-weight: 300">Panduan Penyampaian Aspirasi:</h2>
+    
+    <div class="row">
+      <div class="col-lg-11 m-auto mt-5">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <strong>1. Gunakan identitas sesuai KTP anda</strong> 
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <p>Untuk menyampaikan aspirasi anda diminta untuk menggunakan identitas anda, yakni NIK (Nomor Induk Kependudukan) & NAMA sesuai KTP yang diisi di kolom yang tersedia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <strong>2. Sampaikan aspirasi anda dengan singkat & jelas</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                <p>Pada kolom aspirasi harap menggunakan bahasa indonesia, dengan singkat dan jelas yang mudah dipahami.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <strong>3. Setiap aspirasi yang anda sampaikan angkan di tindak lanjuti maksimal 14 hari kerja</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                <p>Setiap aspirasi yang masuk akan ditampung oleh admin dan Anda dapat selalu memeriksa status aspirasi Anda pada halaman  <a href="/easpirasi-cek">cek aspirasi.</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                <strong>4. Terimakasih telah menggunakan layanan ini dengan bijak & sesuai ketentuan yang ada</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+              <div class="accordion-body">
+                {{-- Kosong --}}
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mb-5">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                <strong>5. Lengkapi Data E-Aspirasi</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+              <div class="accordion-body">
+                <p>Silakan lengkapi data pada form isian data aplikasi E-Aspirasi dibawah.
+                  Setelah semua informasi sudah terisi lengkap akhiri dengan klik tombol Kirim Aspirasi, Aspirasi Anda akan tersimpan pada panel Admin.</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        
-          <div class="col-lg-10" id="form-input">
+      </div>
+    </div>
+
+          <div class="col-lg-10 mt-5" id="form-input">
             @if (session()->has('success'))
               <div class="alert alert-success col-lg-12" role="alert">
                 {{ session('success') }}
@@ -41,6 +92,7 @@
             @endif
             <form method="POST" action="/easpirasi" enctype="multipart/form-data">
              @csrf
+             <h4 class="text-center mb-4" style="font-weight: 300">Silahkan Isi Aspirasi Anda</h4>
                 <div class="mb-3">
                   <label for="nik" class="form-label">Nomor NIK:</label>
                   <input type="text" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" required autofocus value="{{ old('nik') }}" placeholder="16 digit">

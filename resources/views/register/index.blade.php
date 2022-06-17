@@ -1,15 +1,11 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-    <div class="container" id="text">
-        <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-    </div>
-
     <div class="container">
-        <section class="jumbotron text-center mb-5" id="jumbotron">
+        <section class="jumbotron text-center mb-5 mt-5">
             <div class="row justify-content-center">
-                <div class="col-lg-5 mb-5">
-                    <main class="form-registration">
+                <div class="col-md-7 mb-5">
+                    <main class="form-registration" id="form-login">
                         <form action="/register" method="post">
                         @csrf
                             <img class="mt-3" src="img/Malang.png" alt="Logo" width="180" height="130">

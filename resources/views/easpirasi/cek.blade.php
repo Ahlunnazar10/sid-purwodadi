@@ -1,9 +1,6 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
@@ -17,7 +14,7 @@
             </div> 
           @endif  
 
-          <strong class="text-center d-block">Cek Aspirasi Anda disini :</strong>
+          <strong class="text-center d-block mt-5">Cek Aspirasi Anda disini :</strong>
           <div class="col-lg-5 mt-2" style="margin: 0 auto">
             <form method="POST" action="/easpirasi-cek">
               @csrf

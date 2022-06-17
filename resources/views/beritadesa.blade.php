@@ -15,19 +15,30 @@
 }
 </style>
 
-  <div class="container" id="text">
-    <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="/img/desa.jpg" class="d-block w-100" alt="Gambar Berita" id="gelap">
+      </div>
   </div>
+      <div class="container">
+          <div class="carousel-caption">
+          <h1>Berita & Informasi Desa Purwodadi.</h1>
+          <p>Berikut halaman yang memuat Berita, Informasi, & Pengumuman Seputar Desa Purwodadi, Kecamatan Tirtoyudo, Kabupaten Malang.</p>
+          <p><a class="btn btn-lg btn-primary" href="#berita">Jelajahi Berita</a></p>
+          </div>
+      </div>
+</div>
+
 <div class="konten">
   <div class="container">
-      <section class="jumbotron mt-3 mb-5" id="jumbotron">
-        <h1 class="text-center mb-3 mt-3" style="padding: 15px">Berita Desa Purwodadi</h1>
+        <h3 class="text-center mb-3 mt-5" style="padding: 15px;font-weight:300;padding-top:30px" id="berita">Mau cari berita apa hari ini?</h3>
         <div class="row justify-content-center mb-3">
           <div class="col-md-8">
             <form action="/beritadesa">
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Cari berita seputar desa Purwodadi disini.." name="cari" value="{{ request('cari') }}">
-                <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-secondary" type="submit" href="#berita"><i class="bi bi-search"></i></button>
               </div>
             </form>
           </div>
@@ -113,14 +124,9 @@
           </div>
           
           @else
-          <p class="text-center fs-4">Postingan tidak ditemukan</p>
+          <p class="text-center fs-4">Berita tidak ditemukan</p>
           @endif
 
-          
-          
-          
-      </section>
-        
   </div>
   
 </div>

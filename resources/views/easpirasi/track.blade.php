@@ -1,9 +1,6 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-<div class="container" id="text">
-  <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-</div>
 <div class="container">
   <section class="jumbotron text-center mb-5 mt-3">
       <div id="konten">
@@ -21,9 +18,10 @@
 
           
           @foreach ($easpirasi as $aspirasi)
-          <div class="col-lg-10" id="form-input">
-            <h5 class="text-center d-block">Cek Track Anda disini :</h5>
-            <p class="text-center mb-5" style="font-size: 14px">Status : Aspirasi sedang dalam proses, mohon tetap pantau Aspirasi Anda sampai selesai.</p>
+          <div class="col-lg-10 mt-5" id="form-input">
+            <h5 class="text-center d-block">Cek Aspirasi Anda disini :</h5>
+            <p class="text-center mb-3 fst-italic" style="font-size: 14px">Status : Aspirasi sedang dalam proses, mohon tetap pantau Aspirasi Anda sampai selesai.</p>
+            <hr>
               <form method="" action="" enctype="multipart/form-data">
                 @csrf
                    <div class="mb-3">
@@ -55,7 +53,7 @@
                    </div>
                    <div class="mb-3">
                      <label for="ktp" class="form-label">Foto KTP :</label>
-                     <div class="" style="width:400px; height:250px; overflow:hidden">
+                     <div class="" style="width:300px; overflow:hidden">
                         <img src="{{ asset('storage/' . $aspirasi->ktp) }}" alt="Gambar Berita" class="img-fluid">
                     </div>
                    </div>
@@ -89,7 +87,7 @@
                    </div>
                    <div class="mb-3">
                      <label for="pendukung" class="form-label">Bukti Pendukung :</label>
-                     <div class="" style="width:400px; height:250px; overflow:hidden">
+                     <div class="" style="width:300px; overflow:hidden">
                         <img src="{{ asset('storage/' . $aspirasi->pendukung) }}" alt="Gambar tidak tersedia..." class="img-fluid">
                     </div>
                    </div>
