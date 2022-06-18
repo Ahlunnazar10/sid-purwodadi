@@ -15,6 +15,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WilayahController;
 use App\Models\Agama;
 use App\Models\Artikel;
+use App\Models\Aspirasi;
 use App\Models\JenisKelamin;
 use App\Models\Kategori;
 use App\Models\Pekerjaan;
@@ -212,7 +213,11 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function(){
-    return view('dashboard.index');
+    return view('dashboard.index', [
+        'beritadesa' => Artikel::all(),
+        'kategoris' => Kategori::all(),
+        'aspirasis' => Aspirasi::all()
+    ]);
 })->middleware('auth');
 
 // Route::resource('/dashboard/berita', DashboardArtikelController::class)->middleware('auth');

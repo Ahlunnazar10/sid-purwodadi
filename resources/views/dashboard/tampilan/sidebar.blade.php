@@ -48,7 +48,7 @@
       </div>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link dropdown-toggle {{ Request::is('dashboard/datadesa*') ? 'active' : '' }}" href="#collapseData" data-bs-toggle="collapse">
+          <a class="nav-link dropdown-toggle {{ Request::is('dashboard/wilayah*') ? 'active' : '' }} {{ Request::is('dashboard/pendidikan*') ? 'active' : '' }} {{ Request::is('dashboard/pekerjaan*') ? 'active' : '' }} {{ Request::is('dashboard/agama*') ? 'active' : '' }} {{ Request::is('dashboard/perkawinan*') ? 'active' : '' }} {{ Request::is('dashboard/jeniskelamin*') ? 'active' : '' }}" href="#collapseData" data-bs-toggle="collapse">
             <span data-feather="database"></span>
             Data Desa 
           </a>
