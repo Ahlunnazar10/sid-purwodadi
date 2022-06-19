@@ -2,9 +2,15 @@
 @extends('dashboard.tampilan.kerangka')
 
 @section('container')
+<style>
+  #konten {
+  color: #055160;
+  }
+</style>
 
+<main id="">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Buat Berita</h1>
+        <h1 class="h2" style="color: #055160">Buat Berita</h1>
     </div>
 
     <div class="col-lg-8" id="form-input">
@@ -52,7 +58,7 @@
               @enderror
             </div>
             
-            <button type="submit" class="btn btn-primary mb-5">Tambah berita</button>
+            <button type="submit" class="btn btn-primary mt-1 mb-4"><span data-feather="plus-circle"></span> Tambah berita</button>
         </form>
     </div>
 
@@ -74,5 +80,7 @@
       }
 
     </script>
+
+</main>
 
 @endsection

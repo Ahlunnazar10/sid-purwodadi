@@ -17,7 +17,6 @@
 }
 </style>
 
-<div class="container">
     <div class="row justify-content-center p-5">
         <div class="col-lg-11" id="form-input">
           <h2 class="text-center mb-3 text-uppercase">
@@ -89,7 +88,7 @@
                     @enderror
                 </div>
 
-                    <a class="btn btn-secondary mt-2" href="/easpirasi-cek">Kembali</a>
+                    <a class="btn btn-secondary mt-2" href="/dashboard/wilayah">Kembali</a>
             </form>
         </div>
     </div>

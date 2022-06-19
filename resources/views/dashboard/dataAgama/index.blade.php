@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-6">
-      <a href="/dashboard/agama-create" class="btn btn-primary mb-3">Tambah Data</a>
+      <a href="/dashboard/agama-create" class="btn mb-3 text-white" style="background-color: #198754">Tambah Data <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>

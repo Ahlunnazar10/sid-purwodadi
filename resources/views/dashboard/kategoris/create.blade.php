@@ -20,7 +20,7 @@
               @enderror
             </div>
             
-            <button type="submit" class="btn btn-primary mb-5">Tambah kategori</button>
+            <button type="submit" class="btn btn-primary mb-5"><span data-feather="plus-circle"></span> Tambah kategori</button>
         </form>
     </div>
 

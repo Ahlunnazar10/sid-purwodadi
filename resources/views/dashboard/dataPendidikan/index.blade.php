@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-      <a href="/dashboard/pendidikan-create" class="btn btn-primary mb-3">Tambah Data</a>
+      <a href="/dashboard/pendidikan-create" class="btn mb-3 text-white" style="background-color: #198754"><span data-feather="arrow-right-circle"></span> Tambah Data</a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>

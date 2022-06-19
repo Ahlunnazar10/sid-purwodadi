@@ -7,7 +7,7 @@
         <h1 class="h2">Edit Berita</h1>
     </div>
 
-    <div class="col-lg-8">
+    <div class="col-lg-10" id="form-input">
         <form method="POST" action="/dashboard/beritadesa/{{ $berita->slug }}/edit" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
@@ -59,7 +59,7 @@
               @enderror
             </div>
             
-            <button type="submit" class="btn btn-primary mb-5">Update</button>
+            <button type="submit" class="btn btn-primary mt-1 mb-4">Update Berita</button>
         </form>
     </div>
 

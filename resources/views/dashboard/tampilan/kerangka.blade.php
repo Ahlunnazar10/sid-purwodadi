@@ -32,6 +32,9 @@
         padding: 30px;
         color: #055160;
       }
+      .h2 {
+        color: #055160;
+      }
     </style>
   </head>
   <body>

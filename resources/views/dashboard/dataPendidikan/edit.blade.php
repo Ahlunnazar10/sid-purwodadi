@@ -7,7 +7,7 @@
         <h1 class="h2">Edit Data Pendidikan</h1>
     </div>
 
-    <div class="col-lg-8">
+    <div class="col-lg-8" id="form-input">
         <form method="POST" action="/dashboard/pendidikan/{{ $pendidikan->id }}/edit" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
@@ -65,7 +65,7 @@
               @enderror
             </div>
             
-            <button type="submit" class="btn btn-primary mb-5">Update Data</button>
+            <button type="submit" class="btn btn-primary mt-1 mb-4">Update Data</button>
         </form>
     </div>
 

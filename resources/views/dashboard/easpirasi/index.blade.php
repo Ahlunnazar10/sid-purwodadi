@@ -6,11 +6,11 @@
     </div>
 
     @if (session()->has('success'))
-    <div class="alert alert-success col-lg-11" role="alert">
+    <div class="alert alert-success col-lg-9" role="alert">
       {{ session('success') }}
     </div> 
     @endif
-    <div class="table-responsive col-lg-11">
+    <div class="table-responsive col-lg-9">
         <table class="table table-striped table-sm mt-3">
           <thead>
             <tr>

@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-6">
-      <a href="/dashboard/kategori-create" class="btn btn-primary mb-3">Kategori baru</a>
+      <a href="/dashboard/kategori-create" class="btn text-white mb-3" style="background-color: #198754">Kategori baru <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>

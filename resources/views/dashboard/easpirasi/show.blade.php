@@ -3,15 +3,15 @@
 
 @section('container')
 
-<div class="container">
     <div class="row justify-content-center p-5">
         <div class="col">
           <h2 class="text-center mb-3 text-uppercase">
               ASPIRASI {{ $aspirasi->nama }}
           </h2>
+          <hr>
 
           
-          <article class="mb-3 mt-4" style="text-align: justify; text-justify:newspaper">
+          <article class="mb-3 mt-4 p-0" style="text-align: justify; text-justify:newspaper">
             {!! $aspirasi->aspirasi !!}
           </article>
           
@@ -48,15 +48,13 @@
 
             <div class="mt-3">
               <a href="/dashboard/easpirasi" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
-              <form action="/dashboard/easpirasi/{{ $aspirasi->id }}" method="POST" class="d-inline">
+              <form action="/dashboard/easpirasi/{{ $aspirasi->nik }}" method="POST" class="d-inline">
                   @csrf
   
-                  <button class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span> Hapus berita</button>
+                  <button class="btn btn-warning" onclick="return confirm('Apakah Aspirasi telah selesai diproses?')"><span data-feather="x-circle"></span> Aspirasi Selesai</button>
               </form>
             </div>
 
         </div>
     </div>
-</div>
-
 @endsection
