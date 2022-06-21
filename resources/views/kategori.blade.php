@@ -102,16 +102,39 @@
     color: #212529;
     margin-top: -20px;
 }
+.tombol {
+    color: #fff;
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+.tombol:hover {
+    background: #f18f01;
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(142, 218, 216, 0.445);
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    border-bottom: solid #fff;
+}
+#dropdown:hover {
+    background-color: #f18f01;
+}
 </style>
 <div id="konten">
-  <div class="container" id="text">
-    <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-  </div>
-
   
 <div class="container">
-    <section class="jumbotron mt-3 mb-5" id="jumbotron">
-    <h1 class="text-center mb-5 mt-3" style="padding: 15px">Kategori Berita : {{ $kategori }}</h1>
+
+    <h1 class="text-center mb-5 mt-5" style="padding: 15px">Kategori Berita : {{ $kategori }}</h1>
 
     <div class="container">
         <div class="row">

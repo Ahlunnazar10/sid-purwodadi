@@ -2,17 +2,6 @@
 
 @section('container')
 <style>
-  .konten {
-    color: #055160;
-    text-align: justify;
-    text-justify: newspaper;
-    /* background-color: whitesmoke;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    padding: 30px; */
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
   #text {
     color: #055160;
     width: 98%;
@@ -35,6 +24,15 @@
     position: absolute;
     z-index: 1;
     font-style: oblique;
+}
+#konten {
+    color: #055160;
+    text-align: justify;
+    text-justify: newspaper;
+    border-radius: 15px;
+    padding: 25px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 #jumbotron {
     /* filter: brightness(100%); */
@@ -113,15 +111,38 @@
     color: #212529;
     margin-top: -20px;
 }
+.tombol {
+    color: #fff;
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+.tombol:hover {
+    background: #f18f01;
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(142, 218, 216, 0.445);
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    border-bottom: solid #fff;
+}
+#dropdown:hover {
+    background-color: #f18f01;
+}
 </style>
-  <div class="container" id="text">
-    <button type="button" class="btn" id="info"><i class="bi bi-megaphone-fill"></i> Info</button><marquee direction=”left” class="pt-1">Selamat datang di sistem informasi desa & e-aspirasi desa purwodadi</marquee>
-  </div>
 
 <div class="konten">
   <div class="container">
-      <section class="jumbotron mt-3 mb-5" id="jumbotron">
-        <h1 class="text-center mb-5 mt-3" style="padding: 15px">Penulis : {{ $author }}</h1>
+        <h1 class="text-center mb-5 mt-5" style="padding: 15px; color:#055160">Penulis : {{ $author }}</h1>
         <div class="container">
           <div class="row">
               @foreach ($berita as $b)

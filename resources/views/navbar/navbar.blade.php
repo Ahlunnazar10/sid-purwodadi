@@ -1,3 +1,13 @@
+<style>
+  @media screen and (max-width: 600px) {
+    #center {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
+}
+</style>
+
 <div class="container-fluid" style="background-image:url('/img/batik.png');">
   <section class="jumbotron text-center">
     <div class="row">
@@ -32,12 +42,12 @@
 
         {{-- Profile --}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "Sejarah") ? 'active' : '' }} {{ ($title === "Karakteristik") ? 'active' : '' }} {{ ($title === "Peta") ? 'active' : '' }} {{ ($title === "Wisata") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-profile" href="/profil">Profil Desa <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "Sejarah") ? 'active' : '' }} {{ ($title === "Karakteristik") ? 'active' : '' }} {{ ($title === "Peta") ? 'active' : '' }} {{ ($title === "Wisata") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-profile">Profil Desa <span class="caret"></span></a>
 
-          <ul class="dropdown-menu bg-sucess" style="background-color:#198754">
+          <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li><a class="dropdown-item text-white" href="/sejarah" id="dropdown">Sejarah Desa</a></li>
             <li><a class="dropdown-item text-white" href="/karakter" id="dropdown">Karakteristik Desa</a></li>
-            <li><a class="dropdown-item text-white" href="/peta" id="dropdown">Peta Desa</a></li>
+            <li><a class="dropdown-item text-white" href="/peta" id="dropdown">Peta Potensi Desa</a></li>
             <li><a class="dropdown-item text-white" href="/wisata" id="dropdown">Wisata</a></li>
           </ul>
         </li>
@@ -46,9 +56,9 @@
         {{-- Pemerintahan Desa --}}
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "Pemerintah Desa") ? 'active' : '' }} {{ ($title === "Visi & Misi") ? 'active' : '' }} {{ ($title === "Struktur Desa") ? 'active' : '' }} {{ ($title === "BPD Purwodadi") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/profil">Pemerintahan Desa <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "Pemerintah Desa") ? 'active' : '' }} {{ ($title === "Visi & Misi") ? 'active' : '' }} {{ ($title === "Struktur Desa") ? 'active' : '' }} {{ ($title === "BPD Purwodadi") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pemerintahan Desa <span class="caret"></span></a>
 
-          <ul class="dropdown-menu bg-sucess" style="background-color:#198754">
+          <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li><a class="dropdown-item text-white" href="/pemerintah" id="dropdown">Pemerintah Desa</a></li>
             <li><a class="dropdown-item text-white" href="/visimisi" id="dropdown">Visi dan Misi</a></li>
             <li><a class="dropdown-item text-white" href="/struktur" id="dropdown">Struktur Organisasi</a></li>
@@ -59,9 +69,9 @@
 
         {{-- Pelayanan Desa --}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "Pelayanan Surat") ? 'active' : '' }} {{ ($title === "Layanan Dokumen") ? 'active' : '' }} {{ ($title === "Permohonan Surat") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/profil">Pelayanan <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "Pelayanan Surat") ? 'active' : '' }} {{ ($title === "Layanan Dokumen") ? 'active' : '' }} {{ ($title === "Permohonan Surat") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pelayanan <span class="caret"></span></a>
 
-          <ul class="dropdown-menu bg-sucess" style="background-color:#198754">
+          <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li><a class="dropdown-item text-white" href="/pelayanansurat" id="dropdown">Pelayanan Surat</a></li>
             <li><a class="dropdown-item text-white" href="/dokumen" id="dropdown">Layanan Dokumen</a></li>
           </ul>
@@ -70,9 +80,9 @@
 
         {{-- Pelayanan Desa --}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "Wilayah Administrasi") ? 'active' : '' }} {{ ($title === "Data Pendidikan") ? 'active' : '' }} {{ ($title === "Data Pekerjaan") ? 'active' : '' }} {{ ($title === "Data Agama") ? 'active' : '' }} {{ ($title === "Data Perkawinan") ? 'active' : '' }} {{ ($title === "Data Jenis Kelamin") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/profil">Data Desa <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "Wilayah Administrasi") ? 'active' : '' }} {{ ($title === "Data Pendidikan") ? 'active' : '' }} {{ ($title === "Data Pekerjaan") ? 'active' : '' }} {{ ($title === "Data Agama") ? 'active' : '' }} {{ ($title === "Data Perkawinan") ? 'active' : '' }} {{ ($title === "Data Jenis Kelamin") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data Desa <span class="caret"></span></a>
 
-          <ul class="dropdown-menu bg-sucess" style="background-color:#198754">
+          <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li><a class="dropdown-item text-white" href="/wilayah" id="dropdown">Wilayah Administrasi</a></li>
             <li><a class="dropdown-item text-white" href="/pendidikan" id="dropdown">Data Pendidikan</a></li>
             <li><a class="dropdown-item text-white" href="/pekerjaan" id="dropdown">Data Pekerjaan</a></li>
@@ -91,9 +101,9 @@
 
         {{-- E-Aspirasi --}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "E-Aspirasi") ? 'active' : '' }} {{ ($title === "Cek E-Aspirasi") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/easpirasi">E-Aspirasi <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "E-Aspirasi") ? 'active' : '' }} {{ ($title === "Cek E-Aspirasi") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Aspirasi <span class="caret"></span></a>
 
-          <ul class="dropdown-menu bg-sucess" style="background-color:#198754">
+          <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li>
               <a class="dropdown-item text-white" href="/easpirasi" id="dropdown">Buat Aspirasi</a></li>
             <li>
@@ -133,9 +143,3 @@
     </div>
   </div>
 </nav>
-
-{{-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste hic ea animi. Corporis rem excepturi, consectetur facilis maxime voluptate ratione quidem repellat mollitia temporibus, consequatur distinctio esse maiores necessitatibus, autem nam cum! Aut, maxime exercitationem perferendis quod sequi fuga accusantium eos minima assumenda placeat rerum veniam, dicta doloribus alias quos. Laborum dolorem unde odit? Dolor delectus, soluta reprehenderit nemo perferendis neque natus ratione veniam deserunt dolore dicta, inventore, animi repudiandae odio velit itaque! Architecto totam doloribus sequi impedit? A ea temporibus obcaecati, inventore aliquam eveniet modi eligendi magnam doloremque esse ab fugit adipisci quos quae enim nostrum debitis nulla cumque tenetur voluptatem repellat voluptas, deserunt odit! Reprehenderit, dignissimos. 
-
-Optio hic tempora placeat veritatis commodi necessitatibus alias repellat voluptatem soluta culpa? Nisi eaque perspiciatis error qui cupiditate nulla laborum officia suscipit accusantium atque, totam hic eveniet delectus eligendi magni facilis modi corrupti. Est, ratione velit. Distinctio, fugit qui in aperiam aliquid corrupti recusandae totam nobis sint est vitae similique dolorum maiores ad expedita ipsa inventore. Tempore obcaecati molestias sunt quasi consectetur eum aut. Quos ipsa modi deleniti, veritatis, consequatur provident iste voluptatem autem voluptate totam aspernatur iusto quidem fuga dolorem amet labore facere in vitae inventore velit magni molestiae odio tenetur vero. Et totam repellat quo mollitia sunt, sed deserunt. Autem quaerat nemo libero commodi illum sapiente, unde explicabo maxime sed architecto praesentium cupiditate omnis facilis. 
-
-Repellat sequi cupiditate ratione! Asperiores obcaecati vitae exercitationem earum ea harum iure, beatae assumenda. Culpa labore distinctio laborum quae ab velit autem non sed fugiat iure quidem commodi, aut sit ut fugit debitis, sint dicta magnam molestiae aliquid! Voluptates nobis delectus voluptatem voluptatibus molestiae nemo est praesentium nulla modi exercitationem aspernatur, ratione sed? Quisquam culpa deleniti ullam quos. Exercitationem consequuntur officia iusto esse, vitae doloremque laborum at voluptate quam recusandae similique sunt, aspernatur numquam ut. --}}

@@ -4,7 +4,7 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="/img/desa.jpg" class="d-block w-100" alt="Karakteristik Desa" id="gelap">
+          <img src="/img/karakter.png" class="d-block w-100" alt="Karakteristik Desa" id="gelap">
       </div>
   </div>
       <div class="container">

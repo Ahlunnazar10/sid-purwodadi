@@ -165,7 +165,7 @@ Route::get('/jeniskelamin', function () {
 Route::get('/beritadesa', [ArtikelController::class, 'index']);
 
 //halaman tampilan berita
-Route::get('beritadesa/{artikel:slug}', [ArtikelController::class, 'show']);
+Route::get('/beritadesa/{artikel:slug}', [ArtikelController::class, 'show']);
 
 Route::get('/kategories/{kategori:slug}', function(Kategori $kategori) {
     return view('kategori', [
