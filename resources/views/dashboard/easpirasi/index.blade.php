@@ -33,14 +33,8 @@
               <td>{{ $easpirasi->alamat }}</td>
               <td>{{ $easpirasi->kontak }}</td>
               <td>
-                <a href="/dashboard/easpirasi/{{ $easpirasi->nik }}" class="badge bg-info"><span data-feather="eye"></span></a>
-                {{-- <form action="/dashboard/easpirasi/{{ $easpirasi->nik }}" method="POST" class="d-inline">
-                  @csrf
-
-                  <button class="badge bg-danger border-0" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span></button>
-                </form> --}}
-                <form action="/dashboard/easpirasi/{{ $easpirasi->nik }}" method="POST" class="d-inline">
-                  {{-- @method('delete') --}}
+                <a href="/dashboard-easpirasi/{{ $easpirasi->nik }}" class="badge bg-info"><span data-feather="eye"></span></a>
+                <form action="/dashboard-easpirasi/{{ $easpirasi->nik }}" method="POST" class="d-inline">
                   @csrf
 
                   <button class="badge bg-success border-0" onclick="return confirm('Apakah aspirasi telah selesai diproses?')"><span data-feather="check-circle"></span></button>

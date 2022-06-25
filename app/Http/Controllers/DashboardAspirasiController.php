@@ -33,6 +33,6 @@ class DashboardAspirasiController extends Controller
                 }
         Aspirasi::destroy($aspirasi->id);
 
-        return redirect('/dashboard/easpirasi')->with('success', 'Aspirasi telah selesai diproses!');
+        return redirect('/dashboard-easpirasi')->with('success', 'Aspirasi telah selesai diproses!, Terimakasih');
     }
 }

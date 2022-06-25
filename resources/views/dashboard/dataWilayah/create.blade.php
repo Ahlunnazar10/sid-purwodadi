@@ -11,7 +11,7 @@
       <div class="row pt-4 pb-4 ">
 
         <div class="col-lg-11" id="form-input">
-            <form method="POST" action="/dashboard/wilayah-create" enctype="multipart/form-data">
+            <form method="POST" action="/dashboard-wilayah-create" enctype="multipart/form-data">
             @csrf
                 <div class="mb-3">
                   <label for="dusun" class="form-label">Dusun :</label>

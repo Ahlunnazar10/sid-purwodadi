@@ -12,6 +12,6 @@
     </div>
   </div>
   <div class="mt-3">
-  <a href="/dashboard/kategories" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
+  <a href="/dashboard-kategories" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
   </div>
 @endsection

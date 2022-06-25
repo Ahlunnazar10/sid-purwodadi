@@ -8,7 +8,7 @@
     </div>
 
     <div class="col-lg-8" id="form-input">
-        <form method="POST" action="/dashboard/pekerjaan/{{ $pekerjaan->id }}/edit" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard-pekerjaan/{{ $pekerjaan->id }}/edit" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
               <label for="tidak_bekerja" class="form-label">Tidak Bekerja :</label>

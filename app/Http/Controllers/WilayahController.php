@@ -42,14 +42,14 @@ class WilayahController extends Controller
 
         Wilayah::create($validatedData);
 
-        return redirect('/dashboard/wilayah')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-wilayah')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(Wilayah $wilayah)
     {
         Wilayah::destroy($wilayah->id);
 
-        return redirect('/dashboard/wilayah')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-wilayah')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(Wilayah $wilayah)
@@ -77,7 +77,7 @@ class WilayahController extends Controller
         Wilayah::where('id', $wilayah->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/wilayah')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-wilayah')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

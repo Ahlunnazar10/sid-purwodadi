@@ -100,7 +100,7 @@
 
         <h3 class="mt-2 mb-2">{{ $beritadesa[0]->title }}</h3>
         <p>{{ $beritadesa[0]->excerpt }}</p>
-        <p><a class="btn btn-secondary" href="/beritaddesa">Selengkapnya &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
 
@@ -115,7 +115,7 @@
 
         <h3 class="mt-2 mb-2">{{ $beritadesa[1]->title }}</h3>
         <p>{{ $beritadesa[1]->excerpt }}</p>
-        <p><a class="btn btn-secondary" href="/beritaddesa">Selengkapnya &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         @if ($beritadesa[2]->image)
@@ -129,7 +129,7 @@
 
         <h3 class="mt-2 mb-2">{{ $beritadesa[2]->title }}</h3>
         <p>{{ $beritadesa[2]->excerpt }}</p>
-        <p><a class="btn btn-secondary" href="/beritaddesa">Selengkapnya &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 

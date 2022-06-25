@@ -29,14 +29,14 @@ class JenisKelaminController extends Controller
 
         JenisKelamin::create($validatedData);
 
-        return redirect('/dashboard/jeniskelamin')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-jeniskelamin')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(JenisKelamin $jeniskelamin)
     {
         JenisKelamin::destroy($jeniskelamin->id);
 
-        return redirect('/dashboard/jeniskelamin')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-jeniskelamin')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(JenisKelamin $jeniskelamin)
@@ -59,7 +59,7 @@ class JenisKelaminController extends Controller
         JenisKelamin::where('id', $jeniskelamin->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/jeniskelamin')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-jeniskelamin')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

@@ -11,7 +11,7 @@
       <div class="row pt-4 pb-4 ">
 
         <div class="col-lg-11" id="form-input">
-            <form method="POST" action="/dashboard/pendidikan-create" enctype="multipart/form-data">
+            <form method="POST" action="/dashboard-pendidikan-create" enctype="multipart/form-data">
                 <p class="text-muted">*Data harus berupa angka (per-orang = 1).</p>
             @csrf
                 <div class="mb-3">

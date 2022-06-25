@@ -24,7 +24,7 @@
                 <div class="card-body">
                   <h4 class="card-title mt-3" style="font-weight: 500">Total Berita :</h4>
                   <p class="card-text fs-4">{{ $beritadesa->count('id') }} Berita</p>  
-                  <p><a class="btn btn-outline-secondary" href="/dashboard/beritadesa">Lihat detail &raquo;</a></p>
+                  <p><a class="btn btn-outline-secondary" href="/dashboard-beritadesa">Lihat detail &raquo;</a></p>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="card-body">
                   <h4 class="card-title mt-3" style="font-weight: 500">Kategori :</h4>
                   <p class="card-text fs-4">{{ $kategoris->count('id') }} Kategori</p>  
-                  <p><a class="btn btn-outline-secondary" href="/dashboard/kategories">Lihat detail &raquo;</a></p>
+                  <p><a class="btn btn-outline-secondary" href="/dashboard-kategories">Lihat detail &raquo;</a></p>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@
                 <div class="card-body">
                   <h4 class="card-title mt-3" style="font-weight: 500">Data Desa :</h4>
                   <p class="card-text fs-4">6 Data</p>  
-                  <p><a class="btn btn-outline-secondary" href="/dashboard/wilayah">Lihat detail &raquo;</a></p>
+                  <p><a class="btn btn-outline-secondary" href="/dashboard-wilayah">Lihat detail &raquo;</a></p>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <div class="card-body">
                   <h4 class="card-title mt-3" style="font-weight: 500">Aspirasi :</h4>
                   <p class="card-text fs-4">{{ $aspirasis->count('id') }} Aspirasi</p>  
-                  <p><a class="btn btn-outline-secondary" href="/dashboard/easpirasi">Lihat detail &raquo;</a></p>
+                  <p><a class="btn btn-outline-secondary" href="/dashboard-easpirasi">Lihat detail &raquo;</a></p>
                 </div>
               </div>
             </div>

@@ -47,8 +47,8 @@
           </div>
 
             <div class="mt-3">
-              <a href="/dashboard/easpirasi" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
-              <form action="/dashboard/easpirasi/{{ $aspirasi->nik }}" method="POST" class="d-inline">
+              <a href="/dashboard-easpirasi" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
+              <form action="/dashboard-easpirasi/{{ $aspirasi->nik }}" method="POST" class="d-inline">
                   @csrf
   
                   <button class="btn btn-warning" onclick="return confirm('Apakah Aspirasi telah selesai diproses?')"><span data-feather="x-circle"></span> Aspirasi Selesai</button>

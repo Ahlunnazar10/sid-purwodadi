@@ -22,9 +22,9 @@
               {!! $berita->body !!}
           </article>
 
-            <a href="/dashboard/beritadesa" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
-            <a href="/dashboard/beritadesa/{{ $berita->slug }}/edit" class="btn btn-warning"><span data-feather="edit"></span> Edit berita</a>
-            <form action="/dashboard/beritadesa/{{ $berita->slug }}" method="POST" class="d-inline">
+            <a href="/dashboard-beritadesa" class="btn btn-success"><span data-feather="arrow-left"></span> Kembali</a>
+            <a href="/dashboard-beritadesa/{{ $berita->slug }}/edit" class="btn btn-warning"><span data-feather="edit"></span> Edit berita</a>
+            <form action="/dashboard-beritadesa/{{ $berita->slug }}" method="POST" class="d-inline">
                 @csrf
 
                 <button class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span> Hapus </button>

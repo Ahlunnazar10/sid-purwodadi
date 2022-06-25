@@ -31,14 +31,14 @@ class AgamaController extends Controller
 
         Agama::create($validatedData);
 
-        return redirect('/dashboard/agama')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-agama')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(Agama $agama)
     {
         Agama::destroy($agama->id);
 
-        return redirect('/dashboard/agama')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-agama')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(Agama $agama)
@@ -63,7 +63,7 @@ class AgamaController extends Controller
         Agama::where('id', $agama->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/agama')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-agama')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

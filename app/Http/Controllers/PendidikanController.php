@@ -33,14 +33,14 @@ class PendidikanController extends Controller
 
         Pendidikan::create($validatedData);
 
-        return redirect('/dashboard/pendidikan')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-pendidikan')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(Pendidikan $pendidikan)
     {
         Pendidikan::destroy($pendidikan->id);
 
-        return redirect('/dashboard/pendidikan')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-pendidikan')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(Pendidikan $pendidikan)
@@ -67,7 +67,7 @@ class PendidikanController extends Controller
         Pendidikan::where('id', $pendidikan->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/pendidikan')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-pendidikan')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

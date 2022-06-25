@@ -31,14 +31,14 @@ class PerkawinanController extends Controller
 
         Perkawinan::create($validatedData);
 
-        return redirect('/dashboard/perkawinan')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-perkawinan')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(Perkawinan $perkawinan)
     {
         Perkawinan::destroy($perkawinan->id);
 
-        return redirect('/dashboard/perkawinan')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-perkawinan')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(Perkawinan $perkawinan)
@@ -63,7 +63,7 @@ class PerkawinanController extends Controller
         Perkawinan::where('id', $perkawinan->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/perkawinan')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-perkawinan')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

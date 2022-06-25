@@ -37,14 +37,14 @@ class PekerjaanController extends Controller
 
         Pekerjaan::create($validatedData);
 
-        return redirect('/dashboard/pekerjaan')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/dashboard-pekerjaan')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function destroy(Pekerjaan $pekerjaan)
     {
         Pekerjaan::destroy($pekerjaan->id);
 
-        return redirect('/dashboard/pekerjaan')->with('success', 'Data berhasil dihapus!');
+        return redirect('/dashboard-pekerjaan')->with('success', 'Data berhasil dihapus!');
     }
 
     public function edit(Pekerjaan $pekerjaan)
@@ -75,7 +75,7 @@ class PekerjaanController extends Controller
         Pekerjaan::where('id', $pekerjaan->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/pekerjaan')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/dashboard-pekerjaan')->with('success', 'Data berhasil diperbarui!');
 
     }
 }

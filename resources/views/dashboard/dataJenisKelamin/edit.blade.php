@@ -8,7 +8,7 @@
     </div>
 
     <div class="col-lg-8" id="form-input">
-        <form method="POST" action="/dashboard/jeniskelamin/{{ $jeniskelamin->id }}/edit" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard-jeniskelamin/{{ $jeniskelamin->id }}/edit" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
               <label for="pria" class="form-label">Pria :</label>

@@ -9,7 +9,7 @@
 
     <div class="col-lg-8">
         @foreach ($kategoris as $kategori)
-        <form method="POST" action="/dashboard/kategories/{{ $kategori->slug }}/edit" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard-kategories/{{ $kategori->slug }}/edit" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
               <label for="name" class="form-label">Nama kategori :</label>

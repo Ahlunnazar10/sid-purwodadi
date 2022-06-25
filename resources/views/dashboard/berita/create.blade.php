@@ -14,7 +14,7 @@
     </div>
 
     <div class="col-lg-8" id="form-input">
-        <form method="POST" action="/dashboard/beritadesa-create" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard-beritadesa-create" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
               <label for="title" class="form-label">Judul:</label>

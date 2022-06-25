@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-6">
-      <a href="/dashboard/agama-create" class="btn mb-3 text-white" style="background-color: #198754">Tambah Data <span data-feather="arrow-right-circle"></span></a>
+      <a href="/dashboard-agama-create" class="btn mb-3 text-white" style="background-color: #198754">Tambah Data <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -33,8 +33,8 @@
               <td>{{ $agama->hindu }}</td>
               <td>{{ $agama->budha }}</td>
               <td>
-                <a href="/dashboard/agama/{{ $agama->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-                <form action="/dashboard/agama/{{ $agama->id }}" method="POST" class="d-inline">
+                <a href="/dashboard-agama/{{ $agama->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <form action="/dashboard-agama/{{ $agama->id }}" method="POST" class="d-inline">
                   @csrf
 
                   <button class="badge bg-danger border-0" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span></button>
@@ -47,9 +47,3 @@
       </div>
     
 @endsection
-
-{{-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe! Adipisci officia dolore fugit perferendis earum debitis modi? Officiis, quis corrupti aspernatur sed fuga iste aliquam, maiores dolor aut beatae consequatur, minima molestias facere earum totam hic vitae! Sit id quasi labore sunt rem cumque. Tempora illo atque consectetur, voluptate porro error dolores placeat, aliquam cum hic architecto reprehenderit adipisci sint laudantium tenetur eius, dicta odio ipsum consequatur fuga ipsam nostrum. 
-
-Magni, assumenda ratione. Dolor ut pariatur, aliquid cumque praesentium sequi cupiditate ex sapiente aut? Voluptates voluptatibus dolor temporibus iste repudiandae natus reprehenderit consequuntur soluta, nihil facere molestias, quo perferendis. Sequi, quo ut ea praesentium culpa, ipsum voluptatibus molestiae laudantium placeat odit unde, sunt nisi minima quidem minus repellendus dolorem alias quia harum aspernatur necessitatibus repudiandae quibusdam perspiciatis sit! Facere neque corporis delectus cum. 
-
-dolores numquam dolorem vero nam repellendus harum adipisci laborum sequi quod nostrum, autem recusandae similique, impedit enim ipsa facilis, fugiat est labore nulla! Doloremque accusamus blanditiis aliquid accusantium quidem officiis voluptatum rerum debitis pariatur enim minima eligendi facilis rem omnis laudantium autem quis, mollitia commodi magni cupiditate ut distinctio harum. Culpa esse excepturi molestias, cum neque dolor eos asperiores, nam recusandae, expedita eaque eum tempora beatae? --}}

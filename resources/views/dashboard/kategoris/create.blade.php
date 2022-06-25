@@ -8,7 +8,7 @@
     </div>
 
     <div class="col-lg-4">
-        <form method="POST" action="/dashboard/kategori-create" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard-kategori-create" enctype="multipart/form-data">
          @csrf
             <div class="mb-3">
               <label for="name" class="form-label">Nama Kategori :</label>

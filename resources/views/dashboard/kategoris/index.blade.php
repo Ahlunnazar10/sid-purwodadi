@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-6">
-      <a href="/dashboard/kategori-create" class="btn text-white mb-3" style="background-color: #198754">Kategori baru <span data-feather="arrow-right-circle"></span></a>
+      <a href="/dashboard-kategori-create" class="btn text-white mb-3" style="background-color: #198754">Kategori baru <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -27,9 +27,9 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $kategori->name }}</td>
               <td>
-                <a href="/dashboard/kategories/{{ $kategori->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-                <a href="/dashboard/kategories/{{ $kategori->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-                <form action="/dashboard/kategories/{{ $kategori->slug }}" method="POST" class="d-inline">
+                <a href="/dashboard-kategories/{{ $kategori->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
+                <a href="/dashboard-kategories/{{ $kategori->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <form action="/dashboard-kategories/{{ $kategori->slug }}" method="POST" class="d-inline">
                   @csrf
 
                   <button class="badge bg-danger border-0" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span></button>

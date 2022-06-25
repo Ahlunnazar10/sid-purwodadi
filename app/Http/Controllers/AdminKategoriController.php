@@ -43,14 +43,14 @@ class AdminKategoriController extends Controller
 
         Kategori::create($validatedData);
 
-        return redirect('/dashboard/kategories')->with('success', 'Kategori berhasil ditambahkan!');
+        return redirect('/dashboard-kategories')->with('success', 'Kategori berhasil ditambahkan!');
     }
 
     public function destroy(Kategori $kategori)
     {
         Kategori::destroy($kategori->id);
 
-        return redirect('/dashboard/kategories')->with('success', 'Berita berhasil dihapus!');
+        return redirect('/dashboard-kategories')->with('success', 'Berita berhasil dihapus!');
     }
 
     public function edit(Kategori $kategori)
@@ -71,7 +71,7 @@ class AdminKategoriController extends Controller
         Kategori::where('id', $kategori->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/kategories')->with('success', 'Kategori berhasil diperbarui!');
+        return redirect('/dashboard-kategories')->with('success', 'Kategori berhasil diperbarui!');
     }
 
 

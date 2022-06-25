@@ -12,7 +12,7 @@
     @endif
 
     <div class="table-responsive col-lg-6">
-      <a href="/dashboard/jeniskelamin-create" class="btn mb-3 text-white" style="background-color: #198754">Tambah Data <span data-feather="arrow-right-circle"></span></a>
+      <a href="/dashboard-jeniskelamin-create" class="btn mb-3 text-white" style="background-color: #198754">Tambah Data <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -29,8 +29,8 @@
               <td>{{ $jeniskelamin->pria }}</td>
               <td>{{ $jeniskelamin->wanita }}</td>
               <td>
-                <a href="/dashboard/jeniskelamin/{{ $jeniskelamin->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-                <form action="/dashboard/jeniskelamin/{{ $jeniskelamin->id }}" method="POST" class="d-inline">
+                <a href="/dashboard-jeniskelamin/{{ $jeniskelamin->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <form action="/dashboard-jeniskelamin/{{ $jeniskelamin->id }}" method="POST" class="d-inline">
                   @csrf
 
                   <button class="badge bg-danger border-0" onclick="return confirm('Yakin ingin menghapus data?')"><span data-feather="x-circle"></span></button>

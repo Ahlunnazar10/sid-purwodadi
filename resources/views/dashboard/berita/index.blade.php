@@ -1,6 +1,7 @@
 @extends('dashboard.tampilan.kerangka')
 
 @section('container')
+
 <style>
   #konten {
   color: #055160;
@@ -20,7 +21,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="table-responsive-xl">
-        <a href="/dashboard/beritadesa-create" class="btn mb-3 text-white" style="background-color: #198754">Buat berita baru <span data-feather="arrow-right-circle"></span></a>
+        <a href="/dashboard-beritadesa-create" class="btn mb-3 text-white" style="background-color: #198754">Buat berita baru <span data-feather="arrow-right-circle"></span></a>
           <table class="table table-striped table-sm">
             <thead>
               <tr>
@@ -37,9 +38,9 @@
                 <td>{{ $berita->title }}</td>
                 <td>{{ $berita->kategori->name }}</td>
                   <td>
-                    <a href="/dashboard/beritadesa/{{ $berita->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-                    <a href="/dashboard/beritadesa/{{ $berita->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-                    <form action="/dashboard/beritadesa/{{ $berita->slug }}" method="POST" class="d-inline">
+                    <a href="/dashboard-beritadesa/{{ $berita->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
+                    <a href="/dashboard-beritadesa/{{ $berita->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                    <form action="/dashboard-beritadesa/{{ $berita->slug }}" method="POST" class="d-inline">
                       {{-- @method('delete') --}}
                       @csrf
     
@@ -58,9 +59,3 @@
 </main>
     
 @endsection
-
-{{-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe! Adipisci officia dolore fugit perferendis earum debitis modi? Officiis, quis corrupti aspernatur sed fuga iste aliquam, maiores dolor aut beatae consequatur, minima molestias facere earum totam hic vitae! Sit id quasi labore sunt rem cumque. Tempora illo atque consectetur, voluptate porro error dolores placeat, aliquam cum hic architecto reprehenderit adipisci sint laudantium tenetur eius, dicta odio ipsum consequatur fuga ipsam nostrum. 
-
-Magni, assumenda ratione. Dolor ut pariatur, aliquid cumque praesentium sequi cupiditate ex sapiente aut? Voluptates voluptatibus dolor temporibus iste repudiandae natus reprehenderit consequuntur soluta, nihil facere molestias, quo perferendis. Sequi, quo ut ea praesentium culpa, ipsum voluptatibus molestiae laudantium placeat odit unde, sunt nisi minima quidem minus repellendus dolorem alias quia harum aspernatur necessitatibus repudiandae quibusdam perspiciatis sit! Facere neque corporis delectus cum. 
-
-dolores numquam dolorem vero nam repellendus harum adipisci laborum sequi quod nostrum, autem recusandae similique, impedit enim ipsa facilis, fugiat est labore nulla! Doloremque accusamus blanditiis aliquid accusantium quidem officiis voluptatum rerum debitis pariatur enim minima eligendi facilis rem omnis laudantium autem quis, mollitia commodi magni cupiditate ut distinctio harum. Culpa esse excepturi molestias, cum neque dolor eos asperiores, nam recusandae, expedita eaque eum tempora beatae? --}}

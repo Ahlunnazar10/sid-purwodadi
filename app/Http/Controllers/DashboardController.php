@@ -23,7 +23,6 @@ class DashboardController extends Controller
     {
         return view('dashboard.berita.show', [
             "berita" => $artikel
-            // Route::get('/dashboard/beritadesa/{artikel:slug}');
         ]);
     }
 
@@ -32,7 +31,6 @@ class DashboardController extends Controller
         return view('dashboard.berita.create',[
             'kategoris' => Kategori::all()
         ]);
-        // Route::get('/dashboard/create');
     }
 
     public function store(Request $request)
@@ -57,7 +55,7 @@ class DashboardController extends Controller
 
         Artikel::create($validatedData);
 
-        return redirect('/dashboard/beritadesa')->with('success', 'Berita berhasil ditambahkan!');
+        return redirect('/dashboard-beritadesa')->with('success', 'Berita berhasil ditambahkan!');
     }
 
     public function destroy(Artikel $artikel)
@@ -67,7 +65,7 @@ class DashboardController extends Controller
             }
         Artikel::destroy($artikel->id);
 
-        return redirect('/dashboard/beritadesa')->with('success', 'Berita berhasil dihapus!');
+        return redirect('/dashboard-beritadesa')->with('success', 'Berita berhasil dihapus!');
     }
 
     public function edit(Artikel $artikel)
@@ -101,7 +99,7 @@ class DashboardController extends Controller
         Artikel::where('id', $artikel->id)
                     ->update($validatedData);
 
-        return redirect('/dashboard/beritadesa')->with('success', 'Berita berhasil diperbarui!');
+        return redirect('/dashboard-beritadesa')->with('success', 'Berita berhasil diperbarui!');
 
     }
 }
