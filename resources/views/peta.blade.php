@@ -24,12 +24,130 @@
 
           <h5 class="mt-3">2. Potensi Desa</h5>
           <p>Desa Purwodadi mempunyai beberapa potensi yang dapat dikembangkan guna meningkatkan kesejahteraan masyarakat. Masyarakat Desa Purwodadi umumnya bekerja sebagai petani karena letak Desa dikelilingi oleh bukit yang dapat digunakan untuk bercocok tanam serta karena lokasi Desa juga berada di pesisir pantai maka ada pula masyarakat Desa yang bekerja sebagai nelayan maupun pemandu wisata laut. Berikut merupakan potensi Desa Purwodadi:</p>
-          <li>Tambak Ikan</li>
-          <li>Sawah</li>
-          <li>Petani Kopi</li>
-          <li>Petani Cengkeh</li>
-          <li>Nelayan</li>
-          <li>Lain-lain</li>
+          
+          <li style="font-size: 18px">Berikut Tabel Potensi Tambak Ikan :</li>
+
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-11">
+              <div class="table-responsive-xl">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Jenis Produksi</th>
+                      <th scope="col">Volume Produksi</th>
+                      <th scope="col">Luas Area</th>
+                      <th scope="col">Perusahaan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($tambaks as $tambak)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $tambak->jenis }}</td>
+                      <td>{{ $tambak->volume }}</td>
+                      <td>{{ $tambak->luas }}</td>
+                      <td>{{ $tambak->perusahaan }}</td>
+                    </tr>
+                  @endforeach  
+                  </tbody>
+               </table>
+              </div>
+            </div>
+          </div> 
+
+          <li style="font-size: 18px">Berikut Tabel Potensi Pertanian Sawah :</li>
+
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-11">
+              <div class="table-responsive-xl">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Jenis Produksi</th>
+                      <th scope="col">Volume Produksi</th>
+                      <th scope="col">Luas Area</th>
+                      <th scope="col">Jumlah Petani</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($pertanians as $pertanian)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $pertanian->jenis }}</td>
+                      <td>{{ $pertanian->volume }}</td>
+                      <td>{{ $pertanian->luas }}</td>
+                      <td>{{ $pertanian->jumlah }}</td>
+                    </tr>
+                  @endforeach  
+                  </tbody>
+               </table>
+              </div>
+            </div>
+          </div> 
+
+          <li style="font-size: 18px">Berikut Tabel Potensi Perkebunan :</li>
+
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-11">
+              <div class="table-responsive-xl">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Jenis Produksi</th>
+                      <th scope="col">Volume Produksi</th>
+                      <th scope="col">Luas Area</th>
+                      <th scope="col">Jumlah Petani</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($perkebunans as $perkebunan)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $perkebunan->jenis }}</td>
+                      <td>{{ $perkebunan->volume }}</td>
+                      <td>{{ $perkebunan->luas }}</td>
+                      <td>{{ $perkebunan->jumlah }}</td>
+                    </tr>
+                  @endforeach  
+                  </tbody>
+               </table>
+              </div>
+            </div>
+          </div>
+
+          <li style="font-size: 18px">Berikut Tabel Potensi Nelayan :</li>
+
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-11">
+              <div class="table-responsive-xl">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Jenis Produksi</th>
+                      <th scope="col">Volume Produksi</th>
+                      <th scope="col">Jumlah Nelayan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($nelayans as $nelayan)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $nelayan->jenis }}</td>
+                      <td>{{ $nelayan->volume }}</td>
+                      <td>{{ $nelayan->jumlah }}</td>
+                    </tr>
+                  @endforeach  
+                  </tbody>
+               </table>
+              </div>
+            </div>
+          </div>
+
+          <li style="font-size: 18px">Lain-lain</li>
 
           <h5 class="mt-3">3. Potensi Wisata</h5>
           <p>Desa Purwodadi mempunyai beberapa wisata yang bisa dijadikan referensi destinasi wisata Anda dihari libur. <a href="/wisata">Berikut ulasannya...</a> </p>

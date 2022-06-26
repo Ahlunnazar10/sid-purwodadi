@@ -8,19 +8,27 @@ use App\Http\Controllers\DashboardAspirasiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JenisKelaminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NelayanController;
 use App\Http\Controllers\PekerjaanController;
 use App\Http\Controllers\PendidikanController;
 use App\Http\Controllers\PerkawinanController;
+use App\Http\Controllers\PerkebunanController;
+use App\Http\Controllers\PertanianController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TambakController;
 use App\Http\Controllers\WilayahController;
 use App\Models\Agama;
 use App\Models\Artikel;
 use App\Models\Aspirasi;
 use App\Models\JenisKelamin;
 use App\Models\Kategori;
+use App\Models\Nelayan;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
 use App\Models\Perkawinan;
+use App\Models\Perkebunan;
+use App\Models\Pertanian;
+use App\Models\Tambak;
 use App\Models\User;
 use App\Models\Wilayah;
 use Illuminate\Support\Facades\Route;
@@ -63,7 +71,11 @@ Route::get('/karakter', function () {
 });
 Route::get('/peta', function () {
     return view('peta',[
-        "title" => "Peta"
+        'tambaks' => Tambak::all(),
+        'pertanians' => Pertanian::all(),
+        'perkebunans' => Perkebunan::all(),
+        'nelayans' => Nelayan::all(),
+        "title" => "Peta & Potensi Desa"
     ]);
 });
 Route::get('/wisata', function () {
@@ -237,127 +249,195 @@ Route::get('/dashboard-beritadesa-create', [DashboardController::class, 'create'
 Route::post('/dashboard-beritadesa-create', [DashboardController::class, 'store']);
 
 // Kategori Admin 
-Route::get('/dashboard-kategories', [AdminKategoriController::class, 'index'])->middleware('admin');
+Route::get('/dashboard-kategories', [AdminKategoriController::class, 'index'])->middleware('auth');
 
 // Show Kategori
-Route::get('/dashboard-kategories/{kategori:slug}', [AdminKategoriController::class, 'show'])->middleware('admin');
+Route::get('/dashboard-kategories/{kategori:slug}', [AdminKategoriController::class, 'show'])->middleware('auth');
 
 // Create Kategori
-Route::get('/dashboard-kategori-create', [AdminKategoriController::class, 'create'])->middleware('admin');
-Route::post('/dashboard-kategori-create', [AdminKategoriController::class, 'store'])->middleware('admin');
+Route::get('/dashboard-kategori-create', [AdminKategoriController::class, 'create'])->middleware('auth');
+Route::post('/dashboard-kategori-create', [AdminKategoriController::class, 'store'])->middleware('auth');
 
 // Delete kategori
-Route::post('dashboard-kategories/{kategori:slug}', [AdminKategoriController::class, 'destroy'])->middleware('admin');
+Route::post('dashboard-kategories/{kategori:slug}', [AdminKategoriController::class, 'destroy'])->middleware('auth');
 
 // Update/edit kategori
-Route::get('dashboard-kategories/{kategori:slug}/edit', [AdminKategoriController::class, 'edit'])->middleware('admin');
-Route::post('dashboard-kategories/{kategori:slug}/edit', [AdminKategoriController::class, 'update'])->middleware('admin');
+Route::get('dashboard-kategories/{kategori:slug}/edit', [AdminKategoriController::class, 'edit'])->middleware('auth');
+Route::post('dashboard-kategories/{kategori:slug}/edit', [AdminKategoriController::class, 'update'])->middleware('auth');
 
 // DATA DESA :
 // Wilayah Administrasi :
-Route::get('/dashboard-wilayah', [WilayahController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-wilayah', [WilayahController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-wilayah/{wilayah:id}', [WilayahController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-wilayah/{wilayah:id}', [WilayahController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-wilayah-create', [WilayahController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-wilayah-create', [WilayahController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-wilayah-create', [WilayahController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-wilayah/{wilayah:id}', [WilayahController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-wilayah/{wilayah:id}', [WilayahController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-wilayah/{wilayah:id}/edit', [WilayahController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-wilayah/{wilayah:id}/edit', [WilayahController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-wilayah/{wilayah:id}/edit', [WilayahController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-wilayah/{wilayah:id}/edit', [WilayahController::class, 'update'])->middleware('admin');
 
 // DATA DESA :
 // Pendidikan :
-Route::get('/dashboard-pendidikan', [PendidikanController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-pendidikan', [PendidikanController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-pendidikan/{pendidikan:id}', [PendidikanController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-pendidikan/{pendidikan:id}', [PendidikanController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-pendidikan-create', [PendidikanController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-pendidikan-create', [PendidikanController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-pendidikan-create', [PendidikanController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-pendidikan/{pendidikan:id}', [PendidikanController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-pendidikan/{pendidikan:id}', [PendidikanController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-pendidikan/{pendidikan:id}/edit', [PendidikanController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-pendidikan/{pendidikan:id}/edit', [PendidikanController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-pendidikan/{pendidikan:id}/edit', [PendidikanController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-pendidikan/{pendidikan:id}/edit', [PendidikanController::class, 'update'])->middleware('admin');
 
 // DATA DESA :
 // Pekerjaan :
-Route::get('/dashboard-pekerjaan', [PekerjaanController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-pekerjaan', [PekerjaanController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-pekerjaan/{pekerjaan:id}', [PekerjaanController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-pekerjaan/{pekerjaan:id}', [PekerjaanController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-pekerjaan-create', [PekerjaanController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-pekerjaan-create', [PekerjaanController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-pekerjaan-create', [PekerjaanController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-pekerjaan/{pekerjaan:id}', [PekerjaanController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-pekerjaan/{pekerjaan:id}', [PekerjaanController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-pekerjaan/{pekerjaan:id}/edit', [PekerjaanController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-pekerjaan/{pekerjaan:id}/edit', [PekerjaanController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-pekerjaan/{pekerjaan:id}/edit', [PekerjaanController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-pekerjaan/{pekerjaan:id}/edit', [PekerjaanController::class, 'update'])->middleware('admin');
 
 // DATA DESA :
 // Agama :
-Route::get('/dashboard-agama', [AgamaController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-agama', [AgamaController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-agama/{agama:id}', [AgamaController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-agama/{agama:id}', [AgamaController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-agama-create', [AgamaController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-agama-create', [AgamaController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-agama-create', [AgamaController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-agama/{agama:id}', [AgamaController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-agama/{agama:id}', [AgamaController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-agama/{agama:id}/edit', [AgamaController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-agama/{agama:id}/edit', [AgamaController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-agama/{agama:id}/edit', [AgamaController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-agama/{agama:id}/edit', [AgamaController::class, 'update'])->middleware('admin');
 
 // DATA DESA :
 // Perkawinan :
-Route::get('/dashboard-perkawinan', [PerkawinanController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-perkawinan', [PerkawinanController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-perkawinan/{perkawinan:id}', [PerkawinanController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-perkawinan/{perkawinan:id}', [PerkawinanController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-perkawinan-create', [PerkawinanController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-perkawinan-create', [PerkawinanController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-perkawinan-create', [PerkawinanController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-perkawinan/{perkawinan:id}', [PerkawinanController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-perkawinan/{perkawinan:id}', [PerkawinanController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-perkawinan/{perkawinan:id}/edit', [PerkawinanController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-perkawinan/{perkawinan:id}/edit', [PerkawinanController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-perkawinan/{perkawinan:id}/edit', [PerkawinanController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-perkawinan/{perkawinan:id}/edit', [PerkawinanController::class, 'update'])->middleware('admin');
 
 // DATA DESA :
 // Jenis Kelamin :
-Route::get('/dashboard-jeniskelamin', [JenisKelaminController::class, 'index'])->middleware('auth');
+Route::get('/dashboard-jeniskelamin', [JenisKelaminController::class, 'index'])->middleware('admin');
 
 // Show
-Route::get('/dashboard-jeniskelamin/{jeniskelamin:id}', [JenisKelaminController::class, 'show'])->middleware('auth');
+Route::get('/dashboard-jeniskelamin/{jeniskelamin:id}', [JenisKelaminController::class, 'show'])->middleware('admin');
 
 // Create
-Route::get('/dashboard-jeniskelamin-create', [JenisKelaminController::class, 'create'])->middleware('auth');
+Route::get('/dashboard-jeniskelamin-create', [JenisKelaminController::class, 'create'])->middleware('admin');
 Route::post('/dashboard-jeniskelamin-create', [JenisKelaminController::class, 'store']);
 
 // Delete
-Route::post('/dashboard-jeniskelamin/{jeniskelamin:id}', [JenisKelaminController::class, 'destroy'])->middleware('auth');
+Route::post('/dashboard-jeniskelamin/{jeniskelamin:id}', [JenisKelaminController::class, 'destroy'])->middleware('admin');
 
 // Update
-Route::get('/dashboard-jeniskelamin/{jeniskelamin:id}/edit', [JenisKelaminController::class, 'edit'])->middleware('auth');
-Route::post('/dashboard-jeniskelamin/{jeniskelamin:id}/edit', [JenisKelaminController::class, 'update'])->middleware('auth');
+Route::get('/dashboard-jeniskelamin/{jeniskelamin:id}/edit', [JenisKelaminController::class, 'edit'])->middleware('admin');
+Route::post('/dashboard-jeniskelamin/{jeniskelamin:id}/edit', [JenisKelaminController::class, 'update'])->middleware('admin');
 
+// POTENSI DESA :
+// Tambak Ikan :
+Route::get('/dashboard-tambak', [TambakController::class, 'index'])->middleware('auth');
+
+// Show
+Route::get('/dashboard-tambak/{tambak:id}', [TambakController::class, 'show'])->middleware('auth');
+
+// Create
+Route::get('/dashboard-tambak-create', [TambakController::class, 'create'])->middleware('auth');
+Route::post('/dashboard-tambak-create', [TambakController::class, 'store']);
+
+// Delete
+Route::post('/dashboard-tambak/{tambak:id}', [TambakController::class, 'destroy'])->middleware('auth');
+
+// Update
+Route::get('/dashboard-tambak/{tambak:id}/edit', [TambakController::class, 'edit'])->middleware('auth');
+Route::post('/dashboard-tambak/{tambak:id}/edit', [TambakController::class, 'update'])->middleware('auth');
+
+// Pertanian :
+Route::get('/dashboard-pertanian', [PertanianController::class, 'index'])->middleware('auth');
+
+// Show
+Route::get('/dashboard-pertanian/{pertanian:id}', [PertanianController::class, 'show'])->middleware('auth');
+
+// Create
+Route::get('/dashboard-pertanian-create', [PertanianController::class, 'create'])->middleware('auth');
+Route::post('/dashboard-pertanian-create', [PertanianController::class, 'store']);
+
+// Delete
+Route::post('/dashboard-pertanian/{pertanian:id}', [PertanianController::class, 'destroy'])->middleware('auth');
+
+// Update
+Route::get('/dashboard-pertanian/{pertanian:id}/edit', [PertanianController::class, 'edit'])->middleware('auth');
+Route::post('/dashboard-pertanian/{pertanian:id}/edit', [PertanianController::class, 'update'])->middleware('auth');
+
+// Perkebunan :
+Route::get('/dashboard-perkebunan', [PerkebunanController::class, 'index'])->middleware('auth');
+
+// Show
+Route::get('/dashboard-perkebunan/{perkebunan:id}', [PerkebunanController::class, 'show'])->middleware('auth');
+
+// Create
+Route::get('/dashboard-perkebunan-create', [PerkebunanController::class, 'create'])->middleware('auth');
+Route::post('/dashboard-perkebunan-create', [PerkebunanController::class, 'store']);
+
+// Delete
+Route::post('/dashboard-perkebunan/{perkebunan:id}', [PerkebunanController::class, 'destroy'])->middleware('auth');
+
+// Update
+Route::get('/dashboard-perkebunan/{perkebunan:id}/edit', [PerkebunanController::class, 'edit'])->middleware('auth');
+Route::post('/dashboard-perkebunan/{perkebunan:id}/edit', [PerkebunanController::class, 'update'])->middleware('auth');
+
+// Nelayan :
+Route::get('/dashboard-nelayan', [NelayanController::class, 'index'])->middleware('auth');
+
+// Show
+Route::get('/dashboard-nelayan/{nelayan:id}', [NelayanController::class, 'show'])->middleware('auth');
+
+// Create
+Route::get('/dashboard-nelayan-create', [NelayanController::class, 'create'])->middleware('auth');
+Route::post('/dashboard-nelayan-create', [NelayanController::class, 'store']);
+
+// Delete
+Route::post('/dashboard-nelayan/{nelayan:id}', [NelayanController::class, 'destroy'])->middleware('auth');
+
+// Update
+Route::get('/dashboard-nelayan/{nelayan:id}/edit', [NelayanController::class, 'edit'])->middleware('auth');
+Route::post('/dashboard-nelayan/{nelayan:id}/edit', [NelayanController::class, 'update'])->middleware('auth');

@@ -2,7 +2,7 @@
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
         <a href="#collapseOperator" data-bs-toggle="collapse"> 
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3  mb-1 text-muted text-decoration-underline">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3  mb-1 text-muted text-decoration-underline"> 
             <span>Operator Sistem</span>
           </h6> 
         </a>
@@ -31,7 +31,24 @@
             Kategori Berita
           </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle {{ Request::is('dashboard-tambak*') ? 'active' : '' }} {{ Request::is('dashboard-pertanian*') ? 'active' : '' }} {{ Request::is('dashboard-perkebunan*') ? 'active' : '' }} {{ Request::is('dashboard-nelayan*') ? 'active' : '' }}" href="#collapseDataPotensi" data-bs-toggle="collapse">
+            <span data-feather="database"></span>
+            Potensi Desa 
+          </a>
+          <div class="collapse" id="collapseDataPotensi">
+            <div class="card card-body" style="background-color:#F8F9FA">
+              <a class="text-muted" style="text-decoration: none; color:black" href="/dashboard-tambak">Potensi Tambak Ikan</a>
+              <a class="text-muted" style="text-decoration: none; color:black" href="/dashboard-pertanian">Potensi Pertanian Sawah</a>
+              <a class="text-muted" style="text-decoration: none; color:black" href="/dashboard-perkebunan">Potensi Perkebunan</a>
+              <a class="text-muted" style="text-decoration: none; color:black" href="/dashboard-nelayan">Potensi Nelayan</a>
+            </div>
+          </div>
+        </li>
       </ul>
+
+      
 
       @can('admin')
       <a class="" href="#collapseAdmin" data-bs-toggle="collapse"> 

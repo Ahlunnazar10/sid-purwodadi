@@ -42,7 +42,7 @@
 
         {{-- Profile --}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($title === "Sejarah") ? 'active' : '' }} {{ ($title === "Karakteristik") ? 'active' : '' }} {{ ($title === "Peta") ? 'active' : '' }} {{ ($title === "Wisata") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-profile">Profil Desa <span class="caret"></span></a>
+          <a class="nav-link dropdown-toggle {{ ($title === "Sejarah") ? 'active' : '' }} {{ ($title === "Karakteristik") ? 'active' : '' }} {{ ($title === "Peta & Potensi Desa") ? 'active' : '' }} {{ ($title === "Wisata") ? 'active' : '' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-profile">Profil Desa <span class="caret"></span></a>
 
           <ul class="dropdown-menu bg-sucess" style="background-color:#198754" id="center">
             <li><a class="dropdown-item text-white" href="/sejarah" id="dropdown">Sejarah Desa</a></li>

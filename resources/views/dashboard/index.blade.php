@@ -10,7 +10,7 @@
 <main id="konten">
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Halaman Dashboard Administrator</h1>
+        <h1 class="h2">Hallo {{ auth()->user()->name }}, Selamat Datang di Halaman Dasboard</h1>
     </div>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-3" id="card">
@@ -23,7 +23,7 @@
               <div class="col-md-6">
                 <div class="card-body">
                   <h4 class="card-title mt-3" style="font-weight: 500">Total Berita :</h4>
-                  <p class="card-text fs-4">{{ $beritadesa->count('id') }} Berita</p>  
+                    <p class="card-text fs-4">{{ $beritadesa->count('id') }} Berita</p>  
                   <p><a class="btn btn-outline-secondary" href="/dashboard-beritadesa">Lihat detail &raquo;</a></p>
                 </div>
               </div>
