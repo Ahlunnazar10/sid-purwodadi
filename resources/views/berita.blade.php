@@ -140,16 +140,12 @@
                 {{ $berita->title }}
             </h2>
 
-            <p class="text-center mb-1">By: <a href="/penulis/{{ $berita->author->username }}" class="text-decoration-none">{{ $berita->author->name }}</a> in <a href="/kategories/{{ $berita->kategori->slug }}" class="text-decoration-none">{{ $berita->kategori->name }}</a> </p>
+            <p class="text-center mb-1"><img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $berita->author->username }}" class="text-decoration-none">{{ $berita->author->name }}</a> in <a href="/kategories/{{ $berita->kategori->slug }}" class="text-decoration-none">{{ $berita->kategori->name }}</a> </p>
 
             <hr class="mb-4">
 
             <div class="mb-4" style="max-height:400px; overflow:hidden">
-            @if ($berita->image)
                 <img src="{{ asset('storage/' . $berita->image) }}" alt="Gambar Berita" class="img-fluid">
-            @else
-                <img src="https://source.unsplash.com/1200x400?{{ $berita->kategori->name }}" alt="Gambar Berita" class="img-fluid mb-4">
-            @endif
             </div>
             
 

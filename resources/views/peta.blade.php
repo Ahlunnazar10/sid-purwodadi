@@ -9,16 +9,13 @@
           <p class="text-center mb-1" style="font-size: 13px"><i class="bi bi-bookmarks-fill"></i> : Peta Potensi Desa</p>
           <hr>
           
-          <img src="/img/PETA.png" alt="Peta Potensi Desa" class="img-fluid">
+          <img src="/img/PETA_FIX.png" alt="Peta Potensi Desa" class="img-fluid">
 
           <h5 class="mt-4">1. Kondisi Geografi</h5>
-          <p>Desa Purwodadi merupakan salah satu desa dari 13 desa yang berada dibawah naungan Kecamatan Tirtoyudo, Kabupaten Malang, yang terbagi menjadi 6 (enam) dusun wilayah yaitu:</p>
-          <li>Purwodadi Lor</li>
+          <p>Desa Purwodadi merupakan salah satu desa dari 13 desa yang berada dibawah naungan Kecamatan Tirtoyudo, Kabupaten Malang, yang terbagi menjadi 3 (tiga) dusun wilayah yaitu:</p>
+          <li>Lenggoksono</li>
+          <li>Purwodadi</li>
           <li>Balerejo</li>
-          <li>Lenggoksono Kulon</li>
-          <li>Lenggoksono Wetan</li>
-          <li>Purwodadi Kidul</li>
-          <li>Tumpakkembang</li>
           <br>
           <p>Desa Purwodadi memiliki luas wilayah secara keseluruhan ± 1041 ha atau 10,41 km (Pemutahiran data Desa Purwodadi, 2008). Keadaan tanah di Desa Purwodadi adalah tanah lembab, dengan luas pemukiman penduduk sebanyak 30%, daerah persawahan 20%, daerah kebun cengkeh 30%, daerah kebun kopi 15% dan daerah pesisir 5%. Desa Purwodadi mempunyai iklim tropis dengan cuaca cukup hangat serta memiliki dua musim  yaitu: musim kemarau dan musim hujan dengan suhu rata-rata 30°C dengan curah hujan berkisar 450,00 mm/tahunnya.</p>
 

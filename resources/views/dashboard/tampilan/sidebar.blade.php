@@ -91,5 +91,17 @@
       </ul>  
       @endcan
 
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="nav-link border-0" aria-current="page" href="#" style="background-color:#F8F9FA">
+              <span data-feather="log-out"></span>
+              Logout
+            </button>
+          </form>
+        </li>
+      </ul>
+
     </div>
   </nav>

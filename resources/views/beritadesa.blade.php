@@ -47,20 +47,18 @@
         @if ($beritadesa->count() )
           <div class="card mb-3">
             @if ($beritadesa[0]->image)
-            <div style="max-height:400px; overflow:hidden">
-                <img src="{{ asset('storage/' . $beritadesa[0]->image) }}" alt="Gambar Berita" class="img-fluid">
+            <div style="max-height:400px; overflow:hidden; ">
+                <img src="{{ asset('storage/' . $beritadesa[0]->image) }}" alt="Gambar Berita" class="img-fluid" width="1200">
             </div>
             @else
             <img src="https://source.unsplash.com/1200x300?{{ $beritadesa[0]->kategori->name }}" class="gambar">
             @endif
 
-            {{-- <img src="https://source.unsplash.com/1200x400?{{ $beritadesa[0]->kategori->name }}" class="gambar"> --}}
-
             <div class="card-body text-center">
               <a href="/beritadesa/{{ $beritadesa[0]->slug }}" class="text-decoration-none"> <h4 class="card-title" style="color:#055160">{{ $beritadesa[0]->title }}</h4> </a>
               <p>
                 <small class="text-muted">
-                  By: <a href="/penulis/{{ $beritadesa[0]->author->username }}" class="text-decoration-none">{{ $beritadesa[0]->author->name }}</a> in <a href="/kategories/{{ $beritadesa[0]->kategori->slug }}" class="text-decoration-none">{{ $beritadesa[0]->kategori->name }}</a> {{ $beritadesa[0]->created_at->diffForHumans() }} 
+                  <img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $beritadesa[0]->author->username }}" class="text-decoration-none">{{ $beritadesa[0]->author->name }}</a>&nbsp; in <a href="/kategories/{{ $beritadesa[0]->kategori->slug }}" class="text-decoration-none">{{ $beritadesa[0]->kategori->name }}</a>&nbsp; <img src="/img/clock.svg" height="14" alt="" style="margin-top: -4px"> {{ $beritadesa[0]->created_at->diffForHumans() }} 
                 </small>
               </p>
               <p class="card-text">{{ $beritadesa[0]->excerpt }}</p>
@@ -76,19 +74,12 @@
                   <div>
                     <a href="/kategories/{{ $berita->kategori->slug }}"><small class="position-absolute p-2 text-white" style="background-color: rgba(0, 0, 0, 0.6)">{{ $berita->kategori->name }}</small></a>  
                   </div>
-
-                  @if ($berita->image)
                     <img src="{{ asset('storage/' . $berita->image) }}" alt="Gambar Berita" class="img-fluid" style="height: 200px">
-                  @else
-                    <img src="https://source.unsplash.com/300x200?{{ $berita->kategori->name }}" class="card-img-top" alt="Gambar Berita">
-                  @endif
-                  
-
                   <div class="card-body">
                     <h5 class="card-title text-start">{{ $berita->title }}</h5>
                     <p>
                       <small class="text-muted">
-                        By: <a href="/penulis/{{ $berita->author->username }}" class="text-decoration-none">{{ $berita->author->name }}</a> {{ $berita->created_at->diffForHumans() }} 
+                        <img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $berita->author->username }}" class="text-decoration-none">{{ $berita->author->name }}</a>&nbsp; <img src="/img/clock.svg" height="14" alt="" style="margin-top: -4px"> {{ $berita->created_at->diffForHumans() }} 
                       </small>
                     </p>
                     <p class="card-text">{{ $berita->excerpt }}</p>

@@ -50,18 +50,20 @@
         <div class="card mb-3 shadow-sm" style="border-radius:15px">
             <div class="row g-0">
               <div class="col-md-6" id="img-dashboard">
-                <img src="/img/berita.png" class="img-fluid rounded-start mt-2 p-4" alt="...">
+                <img src="/img/potential.png" class="img-fluid rounded-start mt-2 p-4" alt="...">
               </div>
               <div class="col-md-6">
                 <div class="card-body">
-                  <h4 class="card-title mt-3" style="font-weight: 500">Kategori :</h4>
-                  <p class="card-text fs-4">280</p>  
-                  <p><a class="btn btn-outline-secondary" href="#">Lihat detail &raquo;</a></p>
+                  <h4 class="card-title mt-3" style="font-weight: 500">Potensi :</h4>
+                  <p class="card-text fs-4">4 Potensi</p>  
+                  <p><a class="btn btn-outline-secondary" href="/dashboard-tambak">Lihat detail &raquo;</a></p>
                 </div>
               </div>
             </div>
           </div>
     </div>
+
+    @can('admin')
     <div class="col ms-auto">
         <div class="card mb-3 shadow-sm" style="border-radius:15px">
             <div class="row g-0">
@@ -94,6 +96,7 @@
             </div>
           </div>
     </div>
+    @endcan
 </main>
 
     

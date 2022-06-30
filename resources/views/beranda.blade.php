@@ -89,43 +89,27 @@
     <!-- Three columns of text below the carousel -->
     <div class="row" style="color: #055160;">
       <div class="col-lg-4">
-        @if ($beritadesa[0]->image)
-            <div style="max-height:400px; overflow:hidden">
-                <img src="{{ asset('storage/' . $beritadesa[0]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
-            </div>
-            
-        @else
-          <img src="https://source.unsplash.com/1200x300?{{ $beritadesa[0]->kategori->name }}" class="gambar">
-        @endif    
-
+        <div style="max-height:400px; overflow:hidden">
+            <img src="{{ asset('storage/' . $beritadesa[0]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
+        </div>
         <h3 class="mt-2 mb-2">{{ $beritadesa[0]->title }}</h3>
         <p>{{ $beritadesa[0]->excerpt }}</p>
         <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
 
-        @if ($beritadesa[1]->image)
         <div style="max-height:400px; overflow:hidden">
-            <img src="{{ asset('storage/' . $beritadesa[1]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
-        </div>
-        
-        @else
-          <img src="https://source.unsplash.com/1200x300?{{ $beritadesa[1]->kategori->name }}" class="gambar">
-        @endif     
+          <img src="{{ asset('storage/' . $beritadesa[1]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
+        </div>  
 
         <h3 class="mt-2 mb-2">{{ $beritadesa[1]->title }}</h3>
         <p>{{ $beritadesa[1]->excerpt }}</p>
         <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        @if ($beritadesa[2]->image)
         <div style="max-height:400px; overflow:hidden">
-            <img src="{{ asset('storage/' . $beritadesa[2]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
+          <img src="{{ asset('storage/' . $beritadesa[2]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
         </div>
-        
-        @else
-          <img src="https://source.unsplash.com/1200x300?{{ $beritadesa[2]->kategori->name }}" class="gambar">
-        @endif  
 
         <h3 class="mt-2 mb-2">{{ $beritadesa[2]->title }}</h3>
         <p>{{ $beritadesa[2]->excerpt }}</p>

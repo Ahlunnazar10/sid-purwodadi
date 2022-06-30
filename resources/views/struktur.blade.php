@@ -1,6 +1,10 @@
 @extends('tampilan.kerangka')
 
 @section('container')
-  <h1>Struktur</h1>
+  <div class="container">
+    <div id="konten">
+      <iframe src="/img/Struktur.pdf" height="850" style="width: 100%;"></iframe>
+    </div>
+  </div>
 @endsection
     

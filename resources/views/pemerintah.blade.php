@@ -43,13 +43,6 @@
               <li><strong>Kepala urusan keuangan</strong> memiliki fungsi seperti melaksanakan urusan keuangan seperti pengurusan administrasi keuangan, administrasi sumber-sumber pendapatan dan pengeluaran, verifikasi administrasi keuangan, dan admnistrasi penghasilan Kepala Desa, Perangkat Desa, BPD, dan lembaga pemerintahan desa lainnya.</li>
               <li><strong>Kepala urusan perencanaan</strong> memiliki fungsi mengoordinasikan urusan perencanaan seperti menyusun rencana anggaran pendapatan dan belanja desa, menginventarisir data-data dalam rangka pembangunan, melakukan monitoring dan evaluasi program, serta penyusunan laporan.</li>
           </ol>
-          <p><strong>Kepala Kewilayahan</strong> atau sebutan lainnya berkedudukan sebagai unsur satuan tugas kewilayahan yang bertugas membantu Kepala Desa dalam pelaksanaan tugasnya di wilayahnya. Untuk melaksanakan tugas Kepala Kewilayahan/Kepala Dusun memiliki fungsi:</p>
-              <ol>
-                <li>Pembinaan ketentraman dan ketertiban, pelaksanaan upaya perlindungan masyarakat, mobilitas kependudukan, dan penataan dan pengelolaan wilayah.</li>
-                <li>Mengawasi pelaksanaan pembangunan di wilayahnya.</li>
-                <li>Melaksanakan pembinaan kemasyarakatan dalam meningkatkan kemampuan dan kesadaran masyarakat dalam menjaga lingkungannya.</li>
-                <li>Melakukan upaya-upaya pemberdayaan masyarakat dalam menunjang kelancaran penyelenggaraan pemerintahan dan pembangunan.</li>
-            </ol>
             <p><strong>Kepala seksi</strong> berkedudukan sebagai unsur pelaksana teknis. Kepala seksi bertugas membantu Kepala Desa sebagai pelaksana tugas operasional. Untuk melaksanakan tugas Kepala Seksi mempunyai fungsi:</p>
             <ol>
               <li><strong>Kepala seksi pemerintahan</strong> mempunyai fungsi melaksanakan manajemen tata praja Pemerintahan, menyusun rancangan regulasi desa, pembinaan masalah pertanahan, pembinaan ketentraman dan ketertiban, pelaksanaan upaya perlindungan masyarakat, kependudukan, penataan dan pengelolaan wilayah, serta pendataan dan pengelolaan Profil Desa.</li>

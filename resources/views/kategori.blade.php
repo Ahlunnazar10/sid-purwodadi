@@ -144,19 +144,12 @@
                 <div>
                   <a href="/kategories/{{ $b->kategori->slug }}"><small class="position-absolute p-2 text-white" style="background-color: rgba(0, 0, 0, 0.6)">{{ $b->kategori->name }}</small></a>  
                 </div>
-
-                @if ($b->image)
                     <img src="{{ asset('storage/' . $b->image) }}" alt="Gambar Berita" class="img-fluid" style="height: 200px">
-                  @else
-                    <img src="https://source.unsplash.com/300x200?{{ $b->kategori->name }}" class="card-img-top" alt="Gambar Berita">
-                  @endif
-                
-
                 <div class="card-body">
                   <h5 class="card-title">{{ $b->title }}</h5>
                   <p>
                     <small class="text-muted">
-                      By: <a href="/penulis/{{ $b->author->username }}" class="text-decoration-none">{{ $b->author->name }}</a> {{ $b->created_at->diffForHumans() }} 
+                      <img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $b->author->username }}" class="text-decoration-none">{{ $b->author->name }}</a>&nbsp; <img src="/img/clock.svg" height="14" alt="" style="margin-top: -4px"> {{ $b->created_at->diffForHumans() }} 
                     </small>
                   </p>
                   <p class="card-text">{{ $b->excerpt }}</p>
