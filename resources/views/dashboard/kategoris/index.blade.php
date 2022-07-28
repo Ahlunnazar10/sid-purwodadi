@@ -6,12 +6,12 @@
     </div>
 
     @if (session()->has('success'))
-    <div class="alert alert-success col-lg-6" role="alert">
+    <div class="alert alert-success col-lg-8" role="alert">
       {{ session('success') }}
     </div> 
     @endif
 
-    <div class="table-responsive col-lg-6">
+    <div class="table-responsive col-lg-8">
       <a href="/dashboard-kategori-create" class="btn text-white mb-3" style="background-color: #198754">Kategori baru <span data-feather="arrow-right-circle"></span></a>
         <table class="table table-striped table-sm">
           <thead>

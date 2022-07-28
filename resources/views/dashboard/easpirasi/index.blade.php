@@ -10,7 +10,7 @@
       {{ session('success') }}
     </div> 
     @endif
-    <div class="table-responsive col-lg-9">
+    <div class="table-responsive col-lg-11">
         <table class="table table-striped table-sm mt-3">
           <thead>
             <tr>

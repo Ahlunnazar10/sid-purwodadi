@@ -34,7 +34,7 @@
 
         <li class="nav-item">
           <a class="nav-link dropdown-toggle {{ Request::is('dashboard-tambak*') ? 'active' : '' }} {{ Request::is('dashboard-pertanian*') ? 'active' : '' }} {{ Request::is('dashboard-perkebunan*') ? 'active' : '' }} {{ Request::is('dashboard-nelayan*') ? 'active' : '' }}" href="#collapseDataPotensi" data-bs-toggle="collapse">
-            <span data-feather="database"></span>
+            <span data-feather="sunrise"></span>
             Potensi Desa 
           </a>
           <div class="collapse" id="collapseDataPotensi">

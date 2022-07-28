@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Foundation\Auth\VerifiesEmails;
+use App\Mail\EmailAspirasi;
+use App\Mail\Registrasi;
+use App\Notifications\Informasi;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
+    use VerifiesEmails;
+
     public function index()
     {
         return view('register.index',[
@@ -24,10 +32,13 @@ class RegisterController extends Controller
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-        User::create($validatedData);
+        $register = User::create($validatedData);
 
-        // $request->session()->flash('berhasil', 'Akun berhasil didaftar, Silahkan login!');
+        $text = [
+            'subject' => 'Aspirasi Terkirim!'
+        ];
+        Mail::to($register->email)->send(new Registrasi($text));
 
-        return redirect('/login')->with('berhasil', 'Akun berhasil didaftar, Silahkan login!');
+        return redirect('/register')->with('berhasil', 'Silahkan cek notifikasi email Anda untuk melakukan login ke sistem!');
     }
 }

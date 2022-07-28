@@ -6,6 +6,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\DashboardAspirasiController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\JenisKelaminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NelayanController;
@@ -33,6 +34,7 @@ use App\Models\User;
 use App\Models\Wilayah;
 use Illuminate\Support\Facades\Route;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -222,7 +224,7 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/register', [RegisterController::class, 'store'], ['verify' => true]);
 
 Route::get('/dashboard', function(){
     return view('dashboard.index', [
@@ -441,3 +443,10 @@ Route::post('/dashboard-nelayan/{nelayan:id}', [NelayanController::class, 'destr
 // Update
 Route::get('/dashboard-nelayan/{nelayan:id}/edit', [NelayanController::class, 'edit'])->middleware('auth');
 Route::post('/dashboard-nelayan/{nelayan:id}/edit', [NelayanController::class, 'update'])->middleware('auth');
+
+// email :
+Route::get('/email', [EmailController::class, 'kirim']);
+
+Route::get('/emailAspirasi', [EmailController::class, 'aspirasikirim']);
+
+Route::get('/notifikasi', [EmailController::class, 'notifikasi']);  

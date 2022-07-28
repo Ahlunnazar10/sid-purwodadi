@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EmailAspirasi;
 
 class AspirasiController extends Controller
 {
@@ -45,8 +47,23 @@ class AspirasiController extends Controller
             $validatedData['pendukung'] = $request->file('pendukung')->store('pendukung');
         }
 
-        Aspirasi::create($validatedData);
+        $aspirasi = Aspirasi::create($validatedData);
 
+        $text = [
+            'subject' => 'Aspirasi Terkirim!'
+        ];
+        Mail::to($aspirasi->email)->send(new EmailAspirasi($text));
+
+        // ophscwpbtyjhwxvd
+        // zbeteaxceushwyln
+
+        // Mail::raw('Terimakasih '.$aspirasi->nama, function ($message) use($aspirasi) {
+        //     $message->from('sid-purwodadi@gmail.com', 'SID-PURWODADI');
+        //     $message->to($aspirasi->email, $aspirasi->nama);
+        //     $message->subject('Aspirasi Anda telah Terkirim!');
+        // });
+        
+        
         return redirect('/easpirasi')->with('success', 'Aspirasi Anda telah terkirim, selanjutnya akan kami proses. Terimakasih!');
     }
 

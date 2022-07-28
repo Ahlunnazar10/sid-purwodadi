@@ -14,12 +14,12 @@
   </div>
 
   @if (session()->has('success'))
-  <div class="alert alert-success col-lg-8" role="alert">
+  <div class="alert alert-success col-lg-10" role="alert">
     {{ session('success') }}
   </div> 
   @endif
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
       <div class="table-responsive-xl">
         <a href="/dashboard-beritadesa-create" class="btn mb-3 text-white" style="background-color: #198754">Buat berita baru <span data-feather="arrow-right-circle"></span></a>
           <table class="table table-striped table-sm">

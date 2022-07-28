@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmailAspirasiSelesai;
 use App\Models\Aspirasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class DashboardAspirasiController extends Controller
@@ -33,6 +35,11 @@ class DashboardAspirasiController extends Controller
                 }
         Aspirasi::destroy($aspirasi->id);
 
-        return redirect('/dashboard-easpirasi')->with('success', 'Aspirasi telah selesai diproses!, Terimakasih');
+        $text = [
+            'subject' => 'Aspirasi Terkirim!'
+        ];
+        Mail::to($aspirasi->email)->send(new EmailAspirasiSelesai($text));
+
+        return redirect('/dashboard-easpirasi')->with('success', 'Aspirasi telah selesai diproses! Terimakasih');
     }
 }

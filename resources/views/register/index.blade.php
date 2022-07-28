@@ -5,6 +5,12 @@
         <section class="jumbotron text-center mb-5 mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-7 mb-5">
+                    @if (session()->has('berhasil'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('berhasil') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>     
+                    @endif
                     <main class="form-registration" id="form-login">
                         <form action="/register" method="post">
                         @csrf
