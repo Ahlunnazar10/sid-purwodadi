@@ -28,6 +28,6 @@ class EmailAspirasi extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.emailAspirasi');
+        return $this->markdown('emails.emailAspirasi')->subject('Aspirasi Terkirim!');
     }
 }

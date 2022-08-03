@@ -6,7 +6,6 @@
         <section class="jumbotron text-center mb-5 mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-5 mb-5">
-
                     @if (session()->has('berhasil'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session('berhasil') }}
@@ -25,7 +24,7 @@
                         <form action="/login" method="post">
                             @csrf
                             <img class="mt-3" src="img/Malang.png" alt="Logo" width="180" height="130">
-                            <h1 class="h3 mb-3 fw-normal">Login Disini</h1>
+                            <h1 class="h3 mb-3 fw-normal">Login Disini :</h1>
                         
                             <div class="form-floating">
                                 <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="contoh@username" autofocus required value="{{ old('username') }}">

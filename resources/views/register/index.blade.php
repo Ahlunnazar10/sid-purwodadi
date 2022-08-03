@@ -15,7 +15,7 @@
                         <form action="/register" method="post">
                         @csrf
                             <img class="mt-3" src="img/Malang.png" alt="Logo" width="180" height="130">
-                            <h1 class="h3 mb-3 fw-normal">Daftar Disini</h1>
+                            <h1 class="h3 mb-3 fw-normal">Pendaftaran akun :</h1>
                         
                             <div class="form-floating">
                                 <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="Nama" required value="{{ old('name') }}">

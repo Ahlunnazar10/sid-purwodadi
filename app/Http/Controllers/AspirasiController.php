@@ -23,9 +23,9 @@ class AspirasiController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nik' => 'required|max:255|unique:aspirasis',
+            'nik' => 'required|min:16|unique:aspirasis',
             'nama' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email:dns',
             'ktp' => 'required|image|file|max:1024',
             'alamat' => 'required',
             'kontak' => 'required',

@@ -28,6 +28,6 @@ class Registrasi extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.emailRegistrasi');
+        return $this->markdown('emails.emailRegistrasi')->subject('Registrasi berhasil!');
     }
 }

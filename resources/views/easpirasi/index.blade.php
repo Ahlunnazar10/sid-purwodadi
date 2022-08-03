@@ -92,7 +92,7 @@
             @endif
             <form method="POST" action="/easpirasi" enctype="multipart/form-data">
              @csrf
-             <h4 class="text-center mb-4" style="font-weight: 300">Silahkan Isi Aspirasi Anda</h4>
+             <h4 class="text-center mb-4" style="font-weight: 300">Silahkan masukan data Aspirasi Anda :</h4>
                 <div class="mb-3">
                   <label for="nik" class="form-label">Nomor NIK:</label>
                   <input type="text" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" required autofocus value="{{ old('nik') }}" placeholder="16 digit">

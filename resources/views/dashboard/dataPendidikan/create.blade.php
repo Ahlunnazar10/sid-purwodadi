@@ -4,7 +4,7 @@
 @section('container')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2" style="color: #055160">Buat Data Pendidikan</h1>
+        <h1 class="h2" style="color: #055160">Tambahkan data pendidikan disini :</h1>
     </div>
 
     <div class="container">
