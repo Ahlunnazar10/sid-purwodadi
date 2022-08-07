@@ -92,8 +92,8 @@
         <div style="max-height:400px; overflow:hidden">
             <img src="{{ asset('storage/' . $beritadesa[0]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
         </div>
-        <h3 class="mt-2 mb-2">{{ $beritadesa[0]->title }}</h3>
-        <p>{{ $beritadesa[0]->excerpt }}</p>
+        <h5 class="mt-3 mb-3">{{ $beritadesa[0]->title }}</h5>
+        <p style="text-align: justify; text-justify: newspaper">{{ $beritadesa[0]->excerpt }}</p>
         <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -102,8 +102,8 @@
           <img src="{{ asset('storage/' . $beritadesa[1]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
         </div>  
 
-        <h3 class="mt-2 mb-2">{{ $beritadesa[1]->title }}</h3>
-        <p>{{ $beritadesa[1]->excerpt }}</p>
+        <h5 class="mt-3 mb-3">{{ $beritadesa[1]->title }}</h5>
+        <p style="text-align: justify; text-justify: newspaper">{{ $beritadesa[1]->excerpt }}</p>
         <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -111,8 +111,8 @@
           <img src="{{ asset('storage/' . $beritadesa[2]->image) }}" alt="Gambar Berita" class="img-fluid" id="clip">
         </div>
 
-        <h3 class="mt-2 mb-2">{{ $beritadesa[2]->title }}</h3>
-        <p>{{ $beritadesa[2]->excerpt }}</p>
+        <h5 class="mt-3 mb-3">{{ $beritadesa[2]->title }}</h5>
+        <p style="text-align: justify; text-justify: newspaper">{{ $beritadesa[2]->excerpt }}</p>
         <p><a class="btn btn-secondary" href="/beritadesa">Selengkapnya &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -151,12 +151,12 @@
           <div class="card shadow-sm">
             <img src="/img/1.png" alt="" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi rapat kepengurusan Pemerintah Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="/img/1.png"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>  
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">17-02-2022</small>
               </div>
             </div>
           </div>
@@ -166,12 +166,12 @@
           <div class="card shadow-sm">
             <img src="/img/2.png" alt="" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi kegiatan sepakbola sehat Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="/img/2.png"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">02-03-2022</small>
               </div>
             </div>
           </div>
@@ -180,12 +180,12 @@
           <div class="card shadow-sm">
             <img src="/img/3.png" alt="" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi pembangunan posko covid-19.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="/img/3.png"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">29-03-2022</small>
               </div>
             </div>
           </div>
@@ -194,12 +194,12 @@
           <div class="card shadow-sm">
             <img src="/img/4.png" alt="" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi penyaluran bansos pada masyarakat Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="/img/4.png"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">09-04-2022</small>
               </div>
             </div>
           </div>
@@ -209,12 +209,12 @@
           <div class="card shadow-sm">
             <img src="/img/5.png" alt="" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi peresmian paud & TK Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="/img/5.png"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">22-06-2022</small>
               </div>
             </div>
           </div>
@@ -226,12 +226,12 @@
             </video>
 
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi video Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="video/video1.mp4"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">24-06-2022</small>
               </div>
             </div>
           </div>
@@ -243,12 +243,12 @@
             </video>
 
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi video pemaparan sejarah Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="video/video2.mp4"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">30-06-2022</small>
               </div>
             </div>
           </div>
@@ -260,12 +260,12 @@
             </video>
 
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Berikut merupakan dokumentasi video tradisi larung saji Desa Purwodadi.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="video/video3.mp4"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat detail</button></a>
                 </div>
-                <small class="text-muted">17-06-2022</small>
+                <small class="text-muted">17-07-2022</small>
               </div>
             </div>
           </div>

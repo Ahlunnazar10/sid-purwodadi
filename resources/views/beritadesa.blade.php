@@ -55,7 +55,7 @@
             @endif
 
             <div class="card-body text-center">
-              <a href="/beritadesa/{{ $beritadesa[0]->slug }}" class="text-decoration-none"> <h4 class="card-title" style="color:#055160">{{ $beritadesa[0]->title }}</h4> </a>
+              <a href="/beritadesa/{{ $beritadesa[0]->slug }}" class="text-decoration-none"> <h4 class="card-title" style="color:#055160; text-transform:uppercase">{{ $beritadesa[0]->title }}</h4> </a>
               <p>
                 <small class="text-muted">
                   <img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $beritadesa[0]->author->username }}" class="text-decoration-none">{{ $beritadesa[0]->author->name }}</a>&nbsp; in <a href="/kategories/{{ $beritadesa[0]->kategori->slug }}" class="text-decoration-none">{{ $beritadesa[0]->kategori->name }}</a>&nbsp; <img src="/img/clock.svg" height="14" alt="" style="margin-top: -4px"> {{ $beritadesa[0]->created_at->diffForHumans() }} 
@@ -76,7 +76,7 @@
                   </div>
                     <img src="{{ asset('storage/' . $berita->image) }}" alt="Gambar Berita" class="img-fluid" style="height: 200px">
                   <div class="card-body">
-                    <h5 class="card-title text-start">{{ $berita->title }}</h5>
+                    <h5 class="card-title text-start" style="text-transform:uppercase">{{ $berita->title }}</h5>
                     <p>
                       <small class="text-muted">
                         <img src="/img/user.svg" alt="" style="margin-top: -6px"> <a href="/penulis/{{ $berita->author->username }}" class="text-decoration-none">{{ $berita->author->name }}</a>&nbsp; <img src="/img/clock.svg" height="14" alt="" style="margin-top: -4px"> {{ $berita->created_at->diffForHumans() }} 

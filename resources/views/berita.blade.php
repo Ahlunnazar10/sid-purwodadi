@@ -136,7 +136,7 @@
 
       <div class="row justify-content-center p-5">
           <div class="col">
-            <h2 class="text-center">
+            <h2 class="text-center" style="text-transform:uppercase">
                 {{ $berita->title }}
             </h2>
 
