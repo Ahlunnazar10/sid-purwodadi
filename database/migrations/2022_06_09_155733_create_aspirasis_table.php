@@ -15,12 +15,13 @@ class CreateAspirasisTable extends Migration
     {
         Schema::create('aspirasis', function (Blueprint $table) {
             $table->id();
-            $table->string('nik')->unique();
+            $table->string('nik');
             $table->string('nama');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('ktp');
             $table->string('alamat');
             $table->string('kontak');
+            $table->string('kategori');
             $table->text('aspirasi');
             $table->string('pendukung')->nullable();
             $table->timestamps();

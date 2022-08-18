@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('login.index',[
+        return view('login.index', [
             'title' => 'Login',
         ]);
     }
@@ -21,13 +21,13 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($login)){
+
+        if (Auth::attempt($login)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         }
 
         return back()->with('LoginError', 'Login gagal, cek kembali data Anda!');
-
     }
 
     public function logout(Request $request)
@@ -36,5 +36,12 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
+    }
+
+    public function verify()
+    {
+        return view('login.verify', [
+            'title' => 'Login',
+        ]);
     }
 }

@@ -1,11 +1,9 @@
 @component('mail::message')
-# Akun Berhasil Terdaftar!
+# Data berhasil direkam!
 
-Selamat Akun Anda telah Terdaftar pada sistem Kami. Silahkan klik tombol dibawah ini untuk melakukan login.
+Selamat data Anda telah terekam pada sistem Kami. Silahkan menunggu verifikasi dari Administrator untuk dapat melakukan login.
 
-@component('mail::button', ['url' => 'https://sid.sid-purwodadi.web.id/login'])
-Login
-@endcomponent
+Kami akan menghubungi Anda kembali jika Akun Anda telah selesai diverifikasi oleh Administrator.
 
 Terimakasih,<br>
 {{ config('app.name') }}

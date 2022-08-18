@@ -12,7 +12,7 @@ class DashboardAspirasiController extends Controller
 {
     public function index()
     {
-        return view('dashboard.easpirasi.index',[
+        return view('dashboard.easpirasi.index', [
             'easpirasis' => Aspirasi::all()
         ]);
     }
@@ -27,12 +27,12 @@ class DashboardAspirasiController extends Controller
 
     public function destroy(Aspirasi $aspirasi)
     {
-        if($aspirasi->ktp) {
+        if ($aspirasi->ktp) {
             Storage::delete($aspirasi->ktp);
-            }
-            if($aspirasi->pendukung) {
-                Storage::delete($aspirasi->pendukug);
-                }
+        }
+        if ($aspirasi->pendukung) {
+            Storage::delete($aspirasi->pendukug);
+        }
         Aspirasi::destroy($aspirasi->id);
 
         $text = [

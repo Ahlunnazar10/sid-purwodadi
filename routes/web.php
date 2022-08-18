@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminKategoriController;
+use App\Http\Controllers\AdminKelolaController;
 use App\Http\Controllers\AgamaController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\AspirasiController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\JenisKelaminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ManajemenUserController;
 use App\Http\Controllers\NelayanController;
 use App\Http\Controllers\PekerjaanController;
 use App\Http\Controllers\PendidikanController;
@@ -17,6 +19,7 @@ use App\Http\Controllers\PerkebunanController;
 use App\Http\Controllers\PertanianController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TambakController;
+use App\Http\Controllers\VerifyController;
 use App\Http\Controllers\WilayahController;
 use App\Models\Agama;
 use App\Models\Artikel;
@@ -57,22 +60,22 @@ Route::get('/', function () {
 
 // Route Profile
 Route::get('/profil', function () {
-    return view('profil',[
+    return view('profil', [
         "title" => "Profil"
     ]);
 });
 Route::get('/sejarah', function () {
-    return view('sejarah',[
+    return view('sejarah', [
         "title" => "Sejarah"
     ]);
 });
 Route::get('/karakter', function () {
-    return view('karakter',[
+    return view('karakter', [
         "title" => "Karakteristik"
     ]);
 });
 Route::get('/peta', function () {
-    return view('peta',[
+    return view('peta', [
         'tambaks' => Tambak::all(),
         'pertanians' => Pertanian::all(),
         'perkebunans' => Perkebunan::all(),
@@ -81,7 +84,7 @@ Route::get('/peta', function () {
     ]);
 });
 Route::get('/wisata', function () {
-    return view('wisata',[
+    return view('wisata', [
         "title" => "Wisata"
     ]);
 });
@@ -89,22 +92,22 @@ Route::get('/wisata', function () {
 
 // Route Pemerintah
 Route::get('/pemerintah', function () {
-    return view('pemerintah',[
+    return view('pemerintah', [
         "title" => "Pemerintah Desa"
     ]);
 });
 Route::get('/visimisi', function () {
-    return view('visimisi',[
+    return view('visimisi', [
         "title" => "Visi & Misi"
     ]);
 });
 Route::get('/struktur', function () {
-    return view('struktur',[
+    return view('struktur', [
         "title" => "Struktur Desa"
     ]);
 });
 Route::get('/bpd', function () {
-    return view('bpd',[
+    return view('bpd', [
         "title" => "BPD Purwodadi"
     ]);
 });
@@ -113,22 +116,22 @@ Route::get('/bpd', function () {
 
 // Route Pelayanan
 Route::get('/layanan', function () {
-    return view('layanan',[
+    return view('layanan', [
         "title" => "Pelayanan"
     ]);
 });
 Route::get('/pelayanansurat', function () {
-    return view('pelayanansurat',[
+    return view('pelayanansurat', [
         "title" => "Pelayanan Surat"
     ]);
 });
 Route::get('/dokumen', function () {
-    return view('dokumen',[
+    return view('dokumen', [
         "title" => "Layanan Dokumen"
     ]);
 });
 Route::get('/suratonline', function () {
-    return view('suratonline',[
+    return view('suratonline', [
         "title" => "Permohonan Surat"
     ]);
 });
@@ -137,37 +140,37 @@ Route::get('/suratonline', function () {
 
 // Route Data Desa
 Route::get('/wilayah', function () {
-    return view('wilayah',[
+    return view('wilayah', [
         'wilayahs' => Wilayah::all(),
         "title" => "Wilayah Administrasi"
     ]);
 });
 Route::get('/pendidikan', function () {
-    return view('pendidikan',[
+    return view('pendidikan', [
         'pendidikans' => Pendidikan::all(),
         "title" => "Data Pendidikan"
     ]);
 });
 Route::get('/pekerjaan', function () {
-    return view('pekerjaan',[
+    return view('pekerjaan', [
         'pekerjaans' => Pekerjaan::all(),
         "title" => "Data Pekerjaan"
     ]);
 });
 Route::get('/agama', function () {
-    return view('agama',[
+    return view('agama', [
         'agamas' => Agama::all(),
         "title" => "Data Agama"
     ]);
 });
 Route::get('/perkawinan', function () {
-    return view('perkawinan',[
+    return view('perkawinan', [
         'perkawinans' => Perkawinan::all(),
         "title" => "Data Perkawinan"
     ]);
 });
 Route::get('/jeniskelamin', function () {
-    return view('jeniskelamin',[
+    return view('jeniskelamin', [
         'jeniskelamins' => JenisKelamin::all(),
         "title" => "Data Jenis Kelamin"
     ]);
@@ -181,7 +184,7 @@ Route::get('/beritadesa', [ArtikelController::class, 'index']);
 //halaman tampilan berita
 Route::get('/beritadesa/{artikel:slug}', [ArtikelController::class, 'show']);
 
-Route::get('/kategories/{kategori:slug}', function(Kategori $kategori) {
+Route::get('/kategories/{kategori:slug}', function (Kategori $kategori) {
     return view('kategori', [
         'title' => $kategori->name,
         'berita' => $kategori->artikel->load('kategori', 'author'),
@@ -189,7 +192,7 @@ Route::get('/kategories/{kategori:slug}', function(Kategori $kategori) {
     ]);
 });
 
-Route::get('/penulis/{author:username}', function(User $author) {
+Route::get('/penulis/{author:username}', function (User $author) {
     return view('penulis', [
         'title' => 'Penulis Artikel',
         'author' => $author->name,
@@ -212,9 +215,9 @@ Route::post('/easpirasi-cek', [AspirasiController::class, 'track']);
 // DASHBBOARD E-Aspirasi
 Route::get('/dashboard-easpirasi', [DashboardAspirasiController::class, 'index'])->middleware('admin');
 
-Route::get('/dashboard-easpirasi/{aspirasi:nik}', [DashboardAspirasiController::class, 'show'])->middleware('admin');
+Route::get('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'show'])->middleware('admin');
 
-Route::post('/dashboard-easpirasi/{aspirasi:nik}', [DashboardAspirasiController::class, 'destroy'])->middleware('admin');
+Route::post('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'destroy'])->middleware('admin');
 
 // Create
 
@@ -223,16 +226,22 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
+Route::get('/verify', [VerifyController::class, 'index'])->name('verify')->middleware('guest');
+
+Route::get('/dashboard-manajemen-user', [AdminKelolaController::class, 'index'])->name('admin')->middleware('AdminStatus');
+Route::get('/dashboard-manajemen-user/{user_id}/verify', [AdminKelolaController::class, 'verify'])->name('admin')->middleware('AdminStatus');
+
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'], ['verify' => true]);
 
-Route::get('/dashboard', function(){
+Route::get('/dashboard', function () {
     return view('dashboard.index', [
         'beritadesa' => Artikel::all(),
         'kategoris' => Kategori::all(),
-        'aspirasis' => Aspirasi::all()
+        'aspirasis' => Aspirasi::all(),
+        'users' => User::whereNull('verified_at')->get()
     ]);
-})->middleware('auth');
+})->middleware('UserStatus');
 
 // Route::resource('/dashboard/berita', DashboardArtikelController::class)->middleware('auth');
 
@@ -449,4 +458,4 @@ Route::get('/email', [EmailController::class, 'kirim']);
 
 Route::get('/emailAspirasi', [EmailController::class, 'aspirasikirim']);
 
-Route::get('/notifikasi', [EmailController::class, 'notifikasi']);  
+Route::get('/notifikasi', [EmailController::class, 'notifikasi']);

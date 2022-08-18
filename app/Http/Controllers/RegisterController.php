@@ -7,7 +7,9 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use App\Mail\EmailAspirasi;
 use App\Mail\Registrasi;
+use App\Mail\VerifyEmail;
 use App\Notifications\Informasi;
+use App\Notifications\UserBaru;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -17,7 +19,7 @@ class RegisterController extends Controller
 
     public function index()
     {
-        return view('register.index',[
+        return view('register.index', [
             'title' => 'Register',
         ]);
     }
@@ -32,6 +34,12 @@ class RegisterController extends Controller
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
+        $verify = User::where('verify', 1)->first();
+        Mail::to('sidpurwodadi1@gmail.com')->send(new VerifyEmail());
+        // if ($verify) {
+        //     $verify->notify(new UserBaru($verify));
+        // }
+
         $register = User::create($validatedData);
 
         $text = [
@@ -39,6 +47,6 @@ class RegisterController extends Controller
         ];
         Mail::to($register->email)->send(new Registrasi($text));
 
-        return redirect('/register')->with('berhasil', 'Silahkan cek notifikasi email Anda untuk melakukan login ke sistem!');
+        return redirect('/register')->with('berhasil', 'Silahkan menunggu verifikasi dari Admin untuk dapat login ke dalam sistem!');
     }
 }
