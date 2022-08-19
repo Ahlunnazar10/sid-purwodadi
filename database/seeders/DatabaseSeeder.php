@@ -29,24 +29,25 @@ class DatabaseSeeder extends Seeder
             'email' => 'ahlun.nzr22@gmail.com',
             'password' => bcrypt('password'),
             'verify' => 1,
+            'is_admin' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Administrator Sistem',
+            'username' => 'Administrtor',
+            'email' => 'sidpurwodadi1@gmail.com',
+            'password' => bcrypt('administrator'),
             'verify' => 1,
             'is_admin' => 1,
             'verified_at' => now(),
         ]);
         User::create([
-            'name' => 'Dea Caesaria Fitri Prasetyo',
-            'username' => 'deacantik',
-            'email' => 'deacaa1@gmail.com',
-            'password' => bcrypt('password'),
+            'name' => 'Operator Sistem',
+            'username' => 'Operator',
+            'email' => 'ahlun.nazar2215@gmail.com',
+            'password' => bcrypt('administrator'),
             'verify' => 1,
-            'verified_at' => now(),
-        ]);
-        User::create([
-            'name' => 'Muhammad Fauzi',
-            'username' => 'fauzi',
-            'email' => 'fauzi@gmail.com',
-            'password' => bcrypt('password'),
-            'verify' => 1,
+            'is_admin' => 1,
             'verified_at' => now(),
         ]);
         // User::create([
@@ -82,7 +83,7 @@ class DatabaseSeeder extends Seeder
         Artikel::create([
             'title' => 'Postingan Pertama',
             'kategori_id' => 1,
-            'user_id' => 1,
+            'user_id' => 3,
             'image' => 'image/sRtuTqyWiouVU1EBqOyuDx3gDaiEAsWmGjNvwQ3G.jpg',
             'slug' => 'postingan-pertama',
 
@@ -93,7 +94,7 @@ class DatabaseSeeder extends Seeder
         Artikel::create([
             'title' => 'Postingan Kedua',
             'kategori_id' => 1,
-            'user_id' => 1,
+            'user_id' => 3,
             'image' => 'image/sRtuTqyWiouVU1EBqOyuDx3gDaiEAsWmGjNvwQ3G.jpg',
             'slug' => 'postingan-kedua',
             'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem dolores repellendus iste, consequatur totam nostrum voluptate odio ad vel laborum esse deleniti...',
@@ -103,7 +104,7 @@ class DatabaseSeeder extends Seeder
         Artikel::create([
             'title' => 'Postingan Ketiga',
             'kategori_id' => 1,
-            'user_id' => 1,
+            'user_id' => 3,
             'slug' => 'postingan-ketiga',
             'image' => 'image/sRtuTqyWiouVU1EBqOyuDx3gDaiEAsWmGjNvwQ3G.jpg',
             'excerpt' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem dolores repellendus iste, consequatur totam nostrum voluptate odio ad vel laborum esse deleniti...',

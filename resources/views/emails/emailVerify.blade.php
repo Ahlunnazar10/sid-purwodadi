@@ -1,6 +1,6 @@
 @component('mail::message')
 @foreach ($users as $user)
-# User {{ $user->name }} telah melakukan registrasi pada Sistem!
+# User baru telah melakukan registrasi pada Sistem!
 
 Anda dapat melakukan verifikasi akun tersebut agar dapat melakukan login pada sistem!
 
