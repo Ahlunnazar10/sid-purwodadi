@@ -6,9 +6,13 @@ use App\Models\Agama;
 use App\Models\Artikel;
 use App\Models\JenisKelamin;
 use App\Models\Kategori;
+use App\Models\Nelayan;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
 use App\Models\Perkawinan;
+use App\Models\Perkebunan;
+use App\Models\Pertanian;
+use App\Models\Tambak;
 use App\Models\User;
 use App\Models\Wilayah;
 use Illuminate\Database\Seeder;
@@ -179,6 +183,48 @@ class DatabaseSeeder extends Seeder
         JenisKelamin::create([
             'pria' => 3110,
             'wanita' => 2252
+        ]);
+
+        Tambak::create([
+            'jenis' => 'Ikan',
+            'volume' => '300 Ton',
+            'luas' => '200 Hektar',
+            'perusahaan' => 'Swasta'
+        ]);
+        Tambak::create([
+            'jenis' => 'Udang',
+            'volume' => '500 Ton',
+            'luas' => '350 Hektar',
+            'perusahaan' => 'Swasta'
+        ]);
+        Pertanian::create([
+            'jenis' => 'Beras',
+            'volume' => '800 Ton',
+            'luas' => '900 Hektar',
+            'jumlah' => '1400 Petani'
+        ]);
+        Perkebunan::create([
+            'jenis' => 'Cengkeh',
+            'volume' => '1300 Ton',
+            'luas' => '2000 Hektar',
+            'jumlah' => '2300 Petani'
+        ]);
+        Perkebunan::create([
+            'jenis' => 'Kopi',
+            'volume' => '400 Ton',
+            'luas' => '600 Hektar',
+            'jumlah' => '780 Petani'
+        ]);
+        Perkebunan::create([
+            'jenis' => 'Pisang',
+            'volume' => '200 Ton',
+            'luas' => '300 Hektar',
+            'jumlah' => '600 Petani'
+        ]);
+        Nelayan::create([
+            'jenis' => 'Ikan',
+            'volume' => '600 Ton',
+            'jumlah' => '850 Nelayan'
         ]);
     }
 }
