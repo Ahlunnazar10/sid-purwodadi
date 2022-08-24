@@ -101,17 +101,28 @@
 
     @endcan
 
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <form action="/logout" method="post">
-          @csrf
-          <button type="submit" class="nav-link border-0" aria-current="page" href="#" style="background-color:#F8F9FA">
-            <span data-feather="log-out"></span>
-            Logout
-          </button>
-        </form>
-      </li>
-    </ul>
+    @if (Auth::user()->can('is_kaurkasi', \App\Models\User::class))<ul class="nav flex-column">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard-easpirasi*') ? 'active' : '' }}" aria-current="page" href="/dashboard-easpirasi">
+            <span data-feather="bell"></span>
+            E-Aspirasi
+          </a>
+        </li>
+      </ul>
+      @endif
+
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="nav-link border-0" aria-current="page" href="#" style="background-color:#F8F9FA">
+              <span data-feather="log-out"></span>
+              Logout
+            </button>
+          </form>
+        </li>
+      </ul>
 
   </div>
 </nav>

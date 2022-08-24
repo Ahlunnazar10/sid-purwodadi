@@ -14,9 +14,13 @@ class Aspirasi extends Model
     public function scopeFilter($query, array $filters)
     {
 
-        $query->when($filters['cari'] ?? false, function($query, $cari) {
+        $query->when($filters['cari'] ?? false, function ($query, $cari) {
             return $query->where('nik', 'like', '%' . $cari . '%');
         });
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'kategori');
+    }
 }

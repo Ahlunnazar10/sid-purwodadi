@@ -213,11 +213,11 @@ Route::get('/easpirasi-cek', [AspirasiController::class, 'cek']);
 Route::post('/easpirasi-cek', [AspirasiController::class, 'track']);
 
 // DASHBBOARD E-Aspirasi
-Route::get('/dashboard-easpirasi', [DashboardAspirasiController::class, 'index'])->middleware('admin');
+Route::get('/dashboard-easpirasi', [DashboardAspirasiController::class, 'index'])->middleware(['admin', 'KaurKasi']);
 
-Route::get('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'show'])->middleware('admin');
+Route::get('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'show'])->middleware(['admin', 'KaurKasi']);
 
-Route::post('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'destroy'])->middleware('admin');
+Route::post('/dashboard-easpirasi/{aspirasi:id}', [DashboardAspirasiController::class, 'destroy'])->middleware(['admin', 'KaurKasi']);
 
 // Create
 
@@ -240,6 +240,7 @@ Route::get('/dashboard', function () {
         'kategoris' => Kategori::all(),
         'aspirasis' => Aspirasi::all(),
         'users' => User::whereNull('verified_at')->get()
+        // $this->authorize('is_kaurkasi', User::class)
     ]);
 })->middleware('UserStatus');
 

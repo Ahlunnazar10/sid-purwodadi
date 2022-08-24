@@ -54,8 +54,6 @@ class AspirasiController extends Controller
 
         Mail::to($aspirasi->email)->send(new EmailAspirasi());
 
-        Mail::to($aspirasi->kategori)->send(new AdminAspirasi());
-
         // ophscwpbtyjhwxvd
         // zbeteaxceushwyln
 

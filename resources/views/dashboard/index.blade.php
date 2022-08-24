@@ -113,6 +113,25 @@
       </div>
     </div>
     @endcan
+
+    @if (Auth::user()->can('is_kaurkasi', \App\Models\User::class))
+    <div class="col m-auto mb-5 mt-3">
+      <div class="card mb-3 shadow-sm" style="border-radius:15px">
+        <div class="row g-0">
+          <div class="col-md-6" id="img-dashboard">
+            <img src="/img/text.png" class="img-fluid rounded-start mt-2 p-4" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h4 class="card-title mt-3" style="font-weight: 500">Aspirasi :</h4>
+              <p class="card-text fs-4">{{ $aspirasis->where('kategori', Auth::user()->id)->count() }} Aspirasi</p>
+              <p><a class="btn btn-outline-secondary" href="/dashboard-easpirasi">Lihat detail &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @endif
 </main>
 
 

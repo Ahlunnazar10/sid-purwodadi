@@ -151,12 +151,12 @@
           <div class="mb-3">
             <label for="kategori" class="form-label">Kategori Aspirasi :</label>
             <select class="form-select" name="kategori">
-              <option value="kaurumum110@gmail.com" selected>KAUR Umum</option>
-              <option value="kaurkeuangan110@gmail.com">KAUR Keuangan</option>
-              <option value="kaurperencanaan110@gmail.com">KAUR Perencanaan</option>
-              <option value="kasipemerintahan110@gmail.com">KASI Pemerintahan</option>
-              <option value="kasikesejahteraan110@gmail.com">KASI Kesejahteraan</option>
-              <option value="kasipelayanan120@gmail.com">KASI Pelayanan</option>
+              <option value="4" selected>KAUR Umum</option>
+              <option value="5">KAUR Keuangan</option>
+              <option value="6">KAUR Perencanaan</option>
+              <option value="7">KASI Pemerintahan</option>
+              <option value="8">KASI Kesejahteraan</option>
+              <option value="9">KASI Pelayanan</option>
             </select>
           </div>
           <div class="mb-3">

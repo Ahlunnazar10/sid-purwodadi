@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         ]);
         User::create([
             'name' => 'Administrator Sistem',
-            'username' => 'Administrtor',
+            'username' => 'Administrator',
             'email' => 'sidpurwodadi1@gmail.com',
             'password' => bcrypt('administrator'),
             'verify' => 1,
@@ -49,9 +49,69 @@ class DatabaseSeeder extends Seeder
             'name' => 'Operator Sistem',
             'username' => 'Operator',
             'email' => 'ahlun.nazar2215@gmail.com',
-            'password' => bcrypt('administrator'),
-            'verify' => 1,
-            'is_admin' => 1,
+            'password' => bcrypt('operator'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kaur Umum',
+            'username' => 'kaurumum',
+            'email' => 'kaurumum110@gmail.com',
+            'password' => bcrypt('kaurumum'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kaur Keuangan',
+            'username' => 'kaurkeuangan',
+            'email' => 'kaurkeuangan110@gmail.com',
+            'password' => bcrypt('kaurkeuangan'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kaur Perencanaan',
+            'username' => 'kaurperencanaan',
+            'email' => 'kaurperencanaan110@gmail.com',
+            'password' => bcrypt('kaurperencanaan'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kasi Pemerintahan',
+            'username' => 'kasipemerintahan',
+            'email' => 'kasipemerintahan110@gmail.com',
+            'password' => bcrypt('kasipemerintahan'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kasi Kesejahteraan',
+            'username' => 'kasikesejahteraan',
+            'email' => 'kasikesejahteraan110@gmail.com',
+            'password' => bcrypt('kasikesejahteraan'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
+            'verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Kasi Pelayanan',
+            'username' => 'kasipelayanan',
+            'email' => 'kasipelayanan110@gmail.com',
+            'password' => bcrypt('kasipelayanan'),
+            'verify' => 0,
+            'is_admin' => 0,
+            'is_kaurkasi' => 1,
             'verified_at' => now(),
         ]);
         // User::create([

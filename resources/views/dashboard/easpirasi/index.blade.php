@@ -25,6 +25,7 @@
       </tr>
     </thead>
     <tbody>
+      @if (Auth::user()->can('is_kaurkasi', \App\Models\User::class))
       @foreach ($easpirasis as $easpirasi)
       <tr>
         <td>{{ $loop->iteration }}</td>
@@ -43,6 +44,28 @@
         </td>
       </tr>
       @endforeach
+      @endif
+
+      @can('admin')
+      @foreach ($easpirasi as $aspirasi)
+      <tr>
+        <td>{{ $loop->iteration }}</td>
+        <td>{{ $aspirasi->nik }}</td>
+        <td>{{ $aspirasi->nama }}</td>
+        <td>{{ $aspirasi->email }}</td>
+        <td>{{ $aspirasi->alamat }}</td>
+        <td>{{ $aspirasi->kontak }}</td>
+        <td>
+          <a href="/dashboard-easpirasi/{{ $aspirasi->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
+          <form action="/dashboard-easpirasi/{{ $aspirasi->id }}" method="POST" class="d-inline">
+            @csrf
+
+            <button class="badge bg-success border-0" onclick="return confirm('Apakah aspirasi telah selesai diproses?')"><span data-feather="check-circle"></span></button>
+          </form>
+        </td>
+      </tr>
+      @endforeach
+      @endcan
     </tbody>
   </table>
 </div>
